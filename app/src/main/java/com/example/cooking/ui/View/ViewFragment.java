@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,13 +53,13 @@ public class ViewFragment extends Fragment {
     }
 
     void setupView(){
-        data= DataGenerator.genData();
-
+        data= DataGenerator.genRecipeData();
         ma=new MyAdapter(R.layout.view_list_itemlayout,data);
         lv=view.findViewById(R.id.view_lv);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(lv.getContext());
-
-        lv.setLayoutManager(layoutManager);
+        //LinearLayoutManager layoutManager = new LinearLayoutManager(lv.getContext());
+        StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        //lv.setLayoutManager(layoutManager);
+        lv.setLayoutManager(sm);
         lv.setAdapter(ma);
 
     }

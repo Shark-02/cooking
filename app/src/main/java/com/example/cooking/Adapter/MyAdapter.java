@@ -15,8 +15,6 @@ public class MyAdapter extends BaseQuickAdapter<recipe, BaseViewHolder> {
     public MyAdapter(int layoutResId, @Nullable List<recipe> data) {
         super(layoutResId, data);
 
-
-
     }
 
     @Override

@@ -10,7 +10,9 @@ public class DataGenerator {
     public static int[] imgs ={R.drawable.to_po,R.drawable.sw_pk,R.drawable.shredded_meat,R.drawable.sour_fish
     ,R.drawable.cheese_cake};
 
-    public static List<recipe> genData() {
+    public static String names []={"柳老师","小孙","小郑","小苏","小颜"};
+    public static int[] heads={R.drawable.lll,R.drawable.xs,R.drawable.xz,R.drawable.xsu,R.drawable.xy};
+    public static List<recipe> genRecipeData() {
         List<recipe> ret = new ArrayList<>();
         for (int i = 0; i < titles.length; ++i) {
             recipe recipes = new recipe();
@@ -18,6 +20,18 @@ public class DataGenerator {
             recipes.title = titles[i];
             recipes.content = "Content of " + i;
             ret.add(recipes);
+        }
+        return ret;
+    }
+
+    public static List<Chat_member> genMessageData() {
+        List<Chat_member> ret = new ArrayList<>();
+        for (int i = 0; i < names.length; ++i) {
+            Chat_member cms = new Chat_member();
+            cms.headImg_id = heads[i];
+            cms.chatName = names[i];
+            cms.chatContent = "Content of " + i;
+            ret.add(cms);
         }
         return ret;
     }

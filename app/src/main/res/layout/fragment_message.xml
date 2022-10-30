@@ -6,17 +6,67 @@
     android:layout_height="match_parent"
     tools:context=".ui.Message.MessageFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/font" />
+
+    <TextView
+        android:id="@+id/message_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="消息"
+        android:textSize="@dimen/font_bar_title"
+        android:textColor="@color/black"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/fans_icon"
+        android:layout_width="@dimen/message_icon"
+        android:layout_height="@dimen/message_icon"
+        android:src="@drawable/add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        
+        />
+
+    <ImageView
+        android:id="@+id/collect_icon"
+        android:layout_width="@dimen/message_icon"
+        android:layout_height="@dimen/message_icon"
+        android:src="@drawable/add"
+        app:layout_constraintEnd_toStartOf="@id/fans_icon"
+        app:layout_constraintTop_toTopOf="@id/fans_icon"
+        />
+
+    <ImageView
+        android:id="@+id/comment_icon"
+        android:layout_width="@dimen/message_icon"
+        android:layout_height="@dimen/message_icon"
+        android:src="@drawable/add"
+        app:layout_constraintStart_toEndOf="@id/fans_icon"
+        app:layout_constraintTop_toTopOf="@id/fans_icon"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_rcv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fans_icon"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="31dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
