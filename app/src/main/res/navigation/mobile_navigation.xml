@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_homepage">
+
+    <fragment
+        android:id="@+id/navigation_homepage"
+        android:name="com.example.cooking.ui.HomePage.HomePageFragment"
+        android:label="@string/title_homepage"
+        tools:layout="@layout/fragment_homepage" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.cooking.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.example.cooking.ui.Message.MessageFragment"
+        android:label="@string/title_message"
+        tools:layout="@layout/fragment_message" />
+
+
+
+    <fragment
+        android:id="@+id/navigation_upload"
+        android:name="com.example.cooking.ui.Upload.UploadFragment"
+        android:label="@string/title_upload"
+        tools:layout="@layout/fragment_upload" />
+
+    <fragment
+        android:id="@+id/navigation_view"
+        android:name="com.example.cooking.ui.View.ViewFragment"
+        android:label="@string/title_view"
+        tools:layout="@layout/fragment_view" />
+</navigation>
