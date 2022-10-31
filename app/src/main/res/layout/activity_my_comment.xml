@@ -6,4 +6,208 @@
     android:layout_height="match_parent"
     tools:context=".MyComment">
 
+    <LinearLayout
+        android:id="@+id/My_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#eb9620"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:text="我的评价"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/comment01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/My_comments"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/dish01"
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dish_01" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/dish01"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/cookname01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="食谱《香翅捞饭，让…》"
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/grade01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评分：5星"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/cookname01"
+                android:textColor="#FF8F03"/>
+            <TextView
+                android:id="@+id/date01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10月21日"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/grade01"
+                android:textColor="#595959"/>
+            <TextView
+                android:id="@+id/time01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18:15"
+                android:textSize="15sp"
+                android:layout_below="@id/grade01"
+                android:layout_toRightOf="@id/date01"
+                android:paddingLeft="5dp"
+                android:textColor="#595959"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/comment02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/comment01"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/dish02"
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dish_02" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/dish02"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/cookname02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="食谱《带骨牛排的最…》"
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/grade02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评分：3.5星"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/cookname02"
+                android:textColor="#FF8F03"/>
+            <TextView
+                android:id="@+id/date02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10月9日"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/grade02"
+                android:textColor="#595959"/>
+            <TextView
+                android:id="@+id/time02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14:38"
+                android:textSize="15sp"
+                android:layout_below="@id/grade02"
+                android:layout_toRightOf="@id/date02"
+                android:paddingLeft="5dp"
+                android:textColor="#595959"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/comment03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/comment02"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/dish03"
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dish_03" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/dish03"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/cookname03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="食谱《青椒酱香肉》"
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/grade03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评分：4.5星"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/cookname03"
+                android:textColor="#FF8F03"/>
+            <TextView
+                android:id="@+id/date03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9月27日"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/grade03"
+                android:textColor="#595959"/>
+            <TextView
+                android:id="@+id/time03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17:02"
+                android:textSize="15sp"
+                android:layout_below="@id/grade03"
+                android:layout_toRightOf="@id/date03"
+                android:paddingLeft="5dp"
+                android:textColor="#595959"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
