@@ -4,6 +4,196 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/orange_1"
     tools:context=".Release">
+
+
+    <LinearLayout
+        android:orientation = "horizontal"
+        android:id="@+id/finish_bg"
+        android:layout_width="320dp"
+        android:layout_height="380dp"
+        android:background="@drawable/share_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintWidth_percent=".5">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/cover"
+        app:layout_constraintBottom_toBottomOf="@+id/finish_bg"
+        app:layout_constraintEnd_toEndOf="@+id/finish_bg"
+        app:layout_constraintStart_toStartOf="@+id/finish_bg"
+        app:layout_constraintTop_toTopOf="@id/finish_bg"
+        app:layout_constraintVertical_bias=".2"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="蒜蓉粉丝煲"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/finish_bg"
+        app:layout_constraintEnd_toEndOf="@+id/finish_bg"
+        app:layout_constraintHorizontal_bias=".05"
+        app:layout_constraintStart_toStartOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/cover"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户123"
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/finish_bg"
+        app:layout_constraintEnd_toEndOf="@+id/finish_bg"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.25" />
+
+
+    <LinearLayout
+        android:id="@+id/share_bg"
+        android:orientation = "horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/share_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='菜谱发布成功了，快去分享吧'
+        android:textColor="@color/gray_2"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/share_bg"
+        app:layout_constraintStart_toStartOf="@+id/share_bg"
+        app:layout_constraintTop_toTopOf="@+id/share_bg"
+        app:layout_constraintVertical_bias="0.1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="×"
+        android:textColor="@color/gray_2"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/share_bg"
+        app:layout_constraintStart_toStartOf="@+id/share_bg"
+        app:layout_constraintTop_toTopOf="@+id/share_bg"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0.95"/>
+
+
+
+    <ImageView
+        android:id="@+id/wechat"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/wechat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/share_bg"
+        app:layout_constraintVertical_bias="0.6"
+        />
+
+    <ImageView
+        android:id="@+id/pyq"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintVertical_bias="0"
+        android:foregroundGravity="center"
+        android:src="@drawable/pyq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wechat"
+        app:layout_constraintTop_toTopOf="@id/wechat" />
+
+    <ImageView
+        android:id="@+id/qq"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="130dp"
+        app:layout_constraintVertical_bias="0"
+        android:foregroundGravity="center"
+        android:src="@drawable/qq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wechat"
+        app:layout_constraintTop_toTopOf="@id/wechat" />
+    <ImageView
+        android:id="@+id/weibo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="230dp"
+        app:layout_constraintVertical_bias="0"
+        android:foregroundGravity="center"
+        android:src="@drawable/weibo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wechat"
+        app:layout_constraintTop_toTopOf="@id/wechat" />
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微信好友"
+        android:textColor="@color/gray_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/wechat"
+        app:layout_constraintStart_toStartOf="@+id/wechat"
+        app:layout_constraintTop_toBottomOf="@+id/wechat" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="朋友圈"
+        android:textColor="@color/gray_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/pyq"
+        app:layout_constraintStart_toStartOf="@+id/pyq"
+        app:layout_constraintTop_toBottomOf="@+id/pyq" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="0dp"
+        android:text="QQ好友"
+        android:textColor="@color/gray_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/qq"
+        app:layout_constraintStart_toStartOf="@id/qq"
+        app:layout_constraintTop_toBottomOf="@+id/qq" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="微博"
+        android:textColor="@color/gray_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/weibo"
+        app:layout_constraintStart_toStartOf="@+id/weibo"
+        app:layout_constraintTop_toBottomOf="@+id/weibo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

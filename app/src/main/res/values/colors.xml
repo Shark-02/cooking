@@ -11,5 +11,11 @@
     <color name="font">#000000</color>
     <color name="gray">#f2f2f2</color>
     <color name="fontgray">#7e7e7e</color>
+    <color name="orange_1">#f7c767</color>
+    <color name="orange_2">#eb9620</color>
+    <color name="gray_1">#666666</color>
+    <color name="gray_2">#999999</color>
+    <color name="gray_3">#f6f6f6</color>
+    <color name="gray_4">#fafafa</color>
 
 </resources>
