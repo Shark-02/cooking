@@ -1,9 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_menu_scene"
     tools:context=".Menu">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hamburger"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-22dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="108dp"
+        android:layout_height="93dp"
+        app:srcCompat="drawable/evauate_mdpi"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="521dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7.7"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="548dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="综合评分"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="529dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="108dp"
+        android:layout_height="93dp"
+        app:srcCompat="@drawable/evauate2_mdpi"
+        tools:layout_editor_absoluteX="232dp"
+        tools:layout_editor_absoluteY="521dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="154人做过"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="588dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="205dp"
+        android:layout_height="41dp"
+        android:text="汉堡"
+        android:textColor="#000000"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="471dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="59dp"
+        android:layout_height="61dp"
+        app:srcCompat="@drawable/cook"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="643dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="118dp"
+        android:layout_height="30dp"
+        android:text="汉姆叔叔"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="662dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="83dp"
+        android:layout_height="35dp"
+        android:text="用量"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="734dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="牛肉馅"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="782dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500克"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="368dp"
+        tools:layout_editor_absoluteY="782dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:text="........................................................."
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="782dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:text="........................................................."
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="823dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:text="........................................................."
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="866dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:text="........................................................."
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="911dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:text="........................................................."
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="956dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="375dp"
+        android:layout_height="65dp"
+        android:text="........................................................."
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="1003dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="半个"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="378dp"
+        tools:layout_editor_absoluteY="823dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="洋葱"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="823dp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="汉堡面包"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="866dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="酱油、黑胡椒"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="911dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="蛋黄酱、黄芥末、番茄酱"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="956dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="芝士片"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="1001dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="步骤1"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="1081dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="377dp"
+        android:layout_height="110dp"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="1103dp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="384dp"
+        android:layout_height="43dp"
+        android:text="肥瘦比例约2：8的牛肉馅，拌入大量黑胡椒粗末、少量酱油，搅匀，或用手抓匀上劲。"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="1222dp" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
