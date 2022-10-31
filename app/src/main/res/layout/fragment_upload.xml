@@ -7,21 +7,26 @@
     tools:context=".ui.Upload.UploadFragment">
 
 
-    <ImageView
+
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/up_hdpo"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/headimg_size"
+        android:layout_height="@dimen/headimg_size"
+        android:src="@drawable/xs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.278"
+        app:riv_oval="true"
+        />
 
     <ImageView
         android:id="@+id/banner"
         android:layout_width="200dp"
         android:layout_height="60dp"
+        android:src="@drawable/banner1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/up_hdpo"
@@ -31,31 +36,66 @@
         android:id="@+id/upload_recipe"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="40dp"
-        android:src="@drawable/add"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/upload_recipe"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/upload_video"
         app:layout_constraintTop_toBottomOf="@id/banner"
-        app:layout_constraintVertical_bias="0.24" />
+        app:layout_constraintVertical_bias="0.239" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="传菜谱"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/upload_recipe"
+        app:layout_constraintEnd_toEndOf="@id/upload_recipe"
+        app:layout_constraintTop_toBottomOf="@id/upload_recipe"
+        />
 
     <ImageView
         android:id="@+id/upload_video"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="64dp"
+        android:src="@drawable/upload_video"
         app:layout_constraintBottom_toBottomOf="@id/upload_recipe"
-        app:layout_constraintStart_toEndOf="@id/upload_recipe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/upload_recipe"
-        app:layout_constraintVertical_bias="0.0" />
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="传视频"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/upload_video"
+        app:layout_constraintEnd_toEndOf="@id/upload_video"
+        app:layout_constraintTop_toBottomOf="@id/upload_video"
+        />
 
     <ImageView
         android:id="@+id/upload_img"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="60dp"
         app:layout_constraintBottom_toBottomOf="@id/upload_recipe"
         app:layout_constraintStart_toEndOf="@id/upload_video"
-
+        android:src="@drawable/upload_img"
         app:layout_constraintTop_toTopOf="@id/upload_recipe"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="传作品"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/upload_img"
+        app:layout_constraintEnd_toEndOf="@id/upload_img"
+        app:layout_constraintTop_toBottomOf="@id/upload_img"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

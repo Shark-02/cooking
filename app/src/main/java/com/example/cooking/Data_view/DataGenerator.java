@@ -35,4 +35,28 @@ public class DataGenerator {
         }
         return ret;
     }
+
+    public static List<recipe> addRecipe(List<recipe> r,int num){
+        List<recipe> ret = r;
+        for (int i=0;i<num;i++){
+            recipe rs = new recipe();
+            rs.img_id = imgs[0];
+            rs.title = titles[0];
+            rs.content = "Content of " + r.size()+i;
+            ret.add(rs);
+        }
+        return ret;
+    }
+
+    public static List<Chat_member> addChatmember(List<Chat_member> cm,int num){
+        List<Chat_member> ret = cm;
+        for (int i=0;i<num;i++){
+            Chat_member cms = new Chat_member();
+            cms.headImg_id = heads[0];
+            cms.chatName = names[0];
+
+            ret.add(cms);
+        }
+        return ret;
+    }
 }

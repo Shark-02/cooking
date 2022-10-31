@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class UploadFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();//销毁自己，这里不能用finish()
+                Log.d("1","btn is click");
                 Intent i = new Intent(getActivity(), Upload.class);
                 startActivity(i);
             }

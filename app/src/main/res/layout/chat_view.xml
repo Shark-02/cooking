@@ -20,7 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/message_head"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/message_head"
         android:textSize="@dimen/recipe_small_size"
         android:textColor="@color/black"
         />
@@ -30,7 +30,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/message_head"
-        app:layout_constraintTop_toBottomOf="@id/message_name"
+        app:layout_constraintBottom_toBottomOf="@id/message_head"
         android:textSize="@dimen/recipe_small_size"
         android:textColor="@color/fontgray"
         />

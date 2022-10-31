@@ -21,6 +21,7 @@ import com.example.cooking.R;
 import com.example.cooking.databinding.FragmentMessageBinding;
 
 import java.util.List;
+import java.util.Random;
 
 
 public class MessageFragment extends Fragment {
@@ -51,6 +52,15 @@ public class MessageFragment extends Fragment {
 
     void SetupView(){
         cm_data= DataGenerator.genMessageData();
+
+        int num= new Random().nextInt(20);
+        for (int i=0;i<num;i++){
+            Chat_member cms = new Chat_member();
+            cms.headImg_id = R.drawable.xs;
+            cms.chatName = "孙瑜";
+            cms.chatContent = "Content of " + cm_data.size();
+            cm_data.add(cms);
+        }
 
         mma=new MyMessageAdapter(R.layout.chat_view,cm_data);
         rcv=root.findViewById(R.id.message_rcv);

@@ -6,29 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomePage.HomePageFragment">
 
-    <TextView
-        android:id="@+id/text_homepage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    
 
     <EditText
         android:id="@+id/search_homepage"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:paddingLeft="10dp"
-        android:paddingStart="10dp"
+        android:background="@drawable/edittext_shape01"
         android:gravity="center"
         android:hint="糖醋里脊"
-        android:background="@drawable/edittext_shape01"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="@id/choose_ingredient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -37,9 +25,10 @@
         app:layout_constraintVertical_bias="0.323" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/add"
+        android:src="@drawable/search"
         app:layout_constraintBottom_toBottomOf="@id/search_homepage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.288"
@@ -58,5 +47,186 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.351" />
 
+    <TextView
+        android:id="@+id/text_homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="选择您要使用的食材，为您规划菜谱"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/choose_ingredient"
+        app:layout_constraintEnd_toEndOf="@id/choose_ingredient"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@id/choose_ingredient" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/basket"
+        android:layout_height="@dimen/basket"
+        android:src="@drawable/basket"
+        app:layout_constraintBottom_toBottomOf="@id/choose_ingredient"
+        app:layout_constraintStart_toStartOf="@id/choose_ingredient"
+        app:layout_constraintTop_toTopOf="@id/choose_ingredient" />
+
+    <ImageView
+        android:id="@+id/home_cooking"
+        android:layout_width="@dimen/homepage_icon"
+        android:layout_height="@dimen/homepage_icon"
+        app:layout_constraintTop_toBottomOf="@id/choose_ingredient"
+        app:layout_constraintStart_toStartOf="@id/choose_ingredient"
+        android:src="@drawable/home_cooking"
+        />
+
+    <TextView
+        android:id="@+id/home_cooking_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="家常菜"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/home_cooking"
+        app:layout_constraintStart_toStartOf="@id/home_cooking"
+        app:layout_constraintEnd_toEndOf="@id/home_cooking"
+        />
+
+    <ImageView
+        android:id="@+id/steam"
+        android:layout_width="@dimen/homepage_icon"
+        android:layout_height="@dimen/homepage_icon"
+        app:layout_constraintTop_toBottomOf="@id/choose_ingredient"
+        app:layout_constraintStart_toEndOf="@id/home_cooking"
+        android:src="@drawable/steam"
+        />
+
+    <TextView
+        android:id="@+id/steam_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="蒸煮"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/steam"
+        app:layout_constraintStart_toStartOf="@id/steam"
+        app:layout_constraintEnd_toEndOf="@id/steam"
+        />
+
+    <ImageView
+        android:id="@+id/noodles"
+        android:layout_width="@dimen/homepage_icon"
+        android:layout_height="@dimen/homepage_icon"
+        app:layout_constraintTop_toBottomOf="@id/choose_ingredient"
+        app:layout_constraintStart_toEndOf="@id/steam"
+        android:src="@drawable/noodles"
+        />
+
+    <TextView
+        android:id="@+id/noodles_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="面条"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/noodles"
+        app:layout_constraintStart_toStartOf="@id/noodles"
+        app:layout_constraintEnd_toEndOf="@id/noodles"
+        />
+
+    <ImageView
+        android:id="@+id/deep_dry"
+        android:layout_width="@dimen/homepage_icon"
+        android:layout_height="@dimen/homepage_icon"
+        app:layout_constraintTop_toBottomOf="@id/choose_ingredient"
+        app:layout_constraintEnd_toEndOf="@id/choose_ingredient"
+        android:src="@drawable/deep_dry"
+        />
+
+    <TextView
+        android:id="@+id/deep_dry_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="油炸"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/deep_dry"
+        app:layout_constraintStart_toStartOf="@id/deep_dry"
+        app:layout_constraintEnd_toEndOf="@id/deep_dry"
+        />
+
+    <ImageView
+        android:id="@+id/soup"
+        android:layout_width="@dimen/homepage_icon"
+        android:layout_height="@dimen/homepage_icon"
+        app:layout_constraintTop_toBottomOf="@id/home_cooking_text"
+        app:layout_constraintStart_toStartOf="@id/choose_ingredient"
+        android:src="@drawable/soup"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="汤羹"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/soup"
+        app:layout_constraintStart_toStartOf="@id/soup"
+        app:layout_constraintEnd_toEndOf="@id/soup"
+        />
+
+    <ImageView
+        android:id="@+id/western_food"
+        android:layout_width="@dimen/homepage_icon"
+        android:layout_height="@dimen/homepage_icon"
+        app:layout_constraintTop_toBottomOf="@id/steam_text"
+        app:layout_constraintStart_toEndOf="@id/home_cooking"
+        android:src="@drawable/western_food"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="西餐"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/western_food"
+        app:layout_constraintStart_toStartOf="@id/western_food"
+        app:layout_constraintEnd_toEndOf="@id/western_food"
+        />
+
+    <ImageView
+        android:id="@+id/bake"
+        android:layout_width="@dimen/homepage_icon"
+        android:layout_height="@dimen/homepage_icon"
+        app:layout_constraintTop_toBottomOf="@id/noodles_text"
+        app:layout_constraintStart_toEndOf="@id/steam"
+        android:src="@drawable/bake"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="烘焙"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/bake"
+        app:layout_constraintStart_toStartOf="@id/bake"
+        app:layout_constraintEnd_toEndOf="@id/bake"
+        />
+
+    <ImageView
+        android:id="@+id/more_catagory"
+        android:layout_width="@dimen/homepage_icon"
+        android:layout_height="@dimen/homepage_icon"
+        app:layout_constraintTop_toBottomOf="@id/deep_dry_text"
+        app:layout_constraintEnd_toEndOf="@id/choose_ingredient"
+        android:src="@drawable/more_catagory"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更多"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/more_catagory"
+        app:layout_constraintStart_toStartOf="@id/more_catagory"
+        app:layout_constraintEnd_toEndOf="@id/more_catagory"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

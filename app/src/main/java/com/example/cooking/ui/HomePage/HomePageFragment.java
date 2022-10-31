@@ -10,27 +10,25 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.cooking.R;
 import com.example.cooking.databinding.FragmentHomepageBinding;
 public class HomePageFragment extends Fragment {
+    View root;
 
-    private FragmentHomepageBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HomePageViewModel homePageViewModel =
                 new ViewModelProvider(this).get(HomePageViewModel.class);
 
-        binding = FragmentHomepageBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        root = inflater.inflate(R.layout.fragment_homepage, container, false);
 
-        final TextView textView = binding.textHomepage;
-        homePageViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
+
     }
 }
