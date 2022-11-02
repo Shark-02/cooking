@@ -33,66 +33,69 @@
 
     <ImageView
         android:id="@+id/fans_icon"
-        android:layout_width="@dimen/message_icon"
-        android:layout_height="@dimen/message_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/fans_icon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/message_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        
-        />
+        app:layout_constraintHorizontal_bias="0.501"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message_icon" />
 
     <TextView
         android:id="@+id/fans_text"
         android:layout_width="@dimen/message_icon"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
         android:text="我的粉丝"
         android:textColor="@color/black"
-        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/fans_icon"
         app:layout_constraintStart_toStartOf="@id/fans_icon"
-        app:layout_constraintTop_toBottomOf="@id/fans_icon"
-        />
+        app:layout_constraintTop_toBottomOf="@id/fans_icon" />
 
     <ImageView
-        android:id="@+id/collect_icon"
-        android:layout_width="@dimen/message_icon"
-        android:layout_height="@dimen/message_icon"
-        android:src="@drawable/collect_icon"
+        android:id="@+id/collection_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/collection_icon"
         app:layout_constraintEnd_toStartOf="@id/fans_icon"
-        app:layout_constraintTop_toTopOf="@id/fans_icon"
-        />
+        app:layout_constraintTop_toTopOf="@id/fans_icon" />
 
     <TextView
         android:id="@+id/collect_text"
         android:layout_width="@dimen/message_icon"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
         android:text="收藏"
         android:textColor="@color/black"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="@id/collect_icon"
-        app:layout_constraintTop_toBottomOf="@id/collect_icon"
-        />
+        app:layout_constraintEnd_toEndOf="@+id/collection_icon"
+        app:layout_constraintStart_toStartOf="@id/collection_icon"
+        app:layout_constraintTop_toBottomOf="@id/collection_icon" />
 
     <ImageView
         android:id="@+id/comment_icon"
-        android:layout_width="@dimen/message_icon"
-        android:layout_height="@dimen/message_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
         android:src="@drawable/comment_icon"
         app:layout_constraintStart_toEndOf="@id/fans_icon"
-        app:layout_constraintTop_toTopOf="@id/fans_icon"
-        />
+        app:layout_constraintTop_toTopOf="@id/fans_icon" />
 
     <TextView
         android:id="@+id/comment_text"
         android:layout_width="@dimen/message_icon"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
         android:text="评论"
         android:textColor="@color/black"
-        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/comment_icon"
         app:layout_constraintStart_toStartOf="@id/comment_icon"
-        app:layout_constraintTop_toBottomOf="@id/comment_icon"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/comment_icon" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/message_rcv"

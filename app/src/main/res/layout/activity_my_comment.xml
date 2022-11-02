@@ -26,6 +26,15 @@
             />
 
     </LinearLayout>
+    <ImageView
+        android:id="@+id/comment_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/white_back"
+        app:layout_constraintBottom_toBottomOf="@id/My_comments"
+        app:layout_constraintTop_toTopOf="@id/My_comments"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp"/>
 
     <RelativeLayout
         android:id="@+id/comment01"

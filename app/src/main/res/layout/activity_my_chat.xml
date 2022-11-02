@@ -11,8 +11,8 @@
         android:id="@+id/friend_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="用户567"
-        android:textColor="@color/gray"
+        android:text="柳老师"
+        android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.04" />
 
     <ImageView
-        android:id="@+id/textView2"
+        android:id="@+id/backView2"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:src="@drawable/back"
@@ -40,29 +40,52 @@
         app:layout_constraintStart_toEndOf="@+id/friend_id"
         app:layout_constraintTop_toTopOf="@+id/friend_id" />
 
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/xs"
+        app:layout_constraintBottom_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toTopOf="@+id/editText2"
+        app:layout_constraintStart_toEndOf="@id/editText2"
+        android:layout_marginStart="10dp"
+        app:riv_oval="true"
+        tools:layout_editor_absoluteX="358dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/mychat_frame_bg"
-        android:text="  hello!  "
+        android:text="  谢谢老师!  "
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="18sp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
-    <EditText
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/lll"
+        app:layout_constraintBottom_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toTopOf="@+id/editText3"
+        app:layout_constraintEnd_toStartOf="@id/editText3"
+        android:layout_marginEnd="10dp"
+        app:riv_oval="true"
+        tools:layout_editor_absoluteX="358dp" />
+
+    <TextView
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
         android:background="@drawable/chat_bg"
-        android:text="  你好啊  "
+        android:text="  你们今天答辩表现不错！  "
         android:textColor="@color/black"
-        android:textSize="18dp"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/backView2"
+        android:layout_marginStart="15dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -89,7 +112,6 @@
         android:id="@+id/imageView"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:background=""
         android:src="@drawable/sound_light"
         app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintEnd_toStartOf="@+id/editText"
@@ -101,7 +123,6 @@
         android:id="@+id/imageView2"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:background=""
         android:src="@drawable/emoji_light"
         app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,14 +133,12 @@
     <ImageView
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:background=""
         android:src="@drawable/round_add_light"
         app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/editText" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

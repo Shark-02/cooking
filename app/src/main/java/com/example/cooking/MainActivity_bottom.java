@@ -2,6 +2,8 @@ package com.example.cooking;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -47,6 +49,8 @@ public class MainActivity_bottom extends AppCompatActivity {
         }
         navController.setGraph(navGraph);
         NavigationUI.setupWithNavController(binding.navView, navController);
+        ImageView select_ingredient=findViewById(R.id.choose_ingredient);
+
     }
 
 }

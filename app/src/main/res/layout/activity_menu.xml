@@ -6,4 +6,337 @@
     android:layout_height="match_parent"
     tools:context=".Menu">
 
+    <LinearLayout
+        android:orientation = "horizontal"
+        android:id="@+id/menu_bg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/theme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/back_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/white_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintHorizontal_bias="0.05"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_bg"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="415dp"
+                android:layout_marginBottom="806dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/hamburger" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="108dp"
+                android:layout_height="93dp"
+                android:layout_marginStart="160dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                app:srcCompat="@drawable/evauate_mdpi" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.7"
+                android:textSize="30dp"
+                android:textColor="@color/orange_2"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="70dp"
+                android:text="综合评分"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="108dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="82dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4"
+                app:srcCompat="@drawable/evauate2_mdpi" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="154人做过"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="74dp"
+                android:layout_marginBottom="9dp"
+                android:text="秘制小汉堡"
+                android:textColor="#000000"
+                android:textSize="32dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/imageView5"
+                app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="90dp"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView5"
+                app:srcCompat="@drawable/cook" />
+
+            <TextView
+                android:id="@+id/Tom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="135dp"
+                android:layout_marginEnd="50dp"
+                android:text="汉姆叔叔"
+                android:textColor="@color/gray_2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintHorizontal_bias="0.174"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="+关注"
+                android:textStyle="bold"
+                android:textColor="@color/theme"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/Tom_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Tom_text" />
+
+            <TextView
+                android:id="@+id/yongliang_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="33dp"
+                android:text="用料"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+            <TextView
+                android:id="@+id/niurouxian_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="牛肉馅"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yongliang_text"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/diandian_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=".................................................................."
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/niurouxian_text" />
+
+            <TextView
+                android:id="@+id/g_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500克"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/niurouxian_text"
+                android:layout_marginEnd="30dp"/>
+
+            <TextView
+                android:id="@+id/bange_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="半个"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/g_text"
+                app:layout_constraintStart_toStartOf="@id/g_text"
+                app:layout_constraintTop_toBottomOf="@id/g_text"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=".................................................................."
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/onion_text" />
+
+            <TextView
+                android:id="@+id/onion_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="洋葱"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@+id/niurouxian_text"
+                app:layout_constraintTop_toBottomOf="@id/niurouxian_text"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/bread_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="汉堡面包"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/onion_text"
+                app:layout_constraintTop_toBottomOf="@id/onion_text"
+                android:layout_marginTop="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=".................................................................."
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bread_text" />
+
+            <TextView
+                android:id="@+id/jy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="酱油、黑胡椒"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@+id/bread_text"
+                app:layout_constraintTop_toBottomOf="@id/bread_text"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=".................................................................."
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/jy_text" />
+
+            <TextView
+                android:id="@+id/jiang_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蛋黄酱、黄芥末、番茄酱"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@+id/jy_text"
+                app:layout_constraintTop_toBottomOf="@id/jy_text"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=".................................................................."
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/jiang_text" />
+
+            <TextView
+                android:id="@+id/cheese_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="芝士片"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@+id/jiang_text"
+                app:layout_constraintTop_toBottomOf="@id/jiang_text"
+                android:layout_marginTop="20dp" />
+
+
+            <TextView
+                android:id="@+id/step_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="165dp"
+                android:text="步骤1"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/yongliang_text"
+                app:layout_constraintTop_toBottomOf="@+id/cheese_text"
+                android:layout_marginTop="40dp"/>
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step_1"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="        肥瘦比例约2：8的牛肉馅，拌入大量黑胡椒粗末、少量酱油，搅匀，或用手抓匀上劲。"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

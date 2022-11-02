@@ -3,6 +3,9 @@ package com.example.cooking.Data_view;
 public class Chat_member {
     public int headImg_id;
     public String chatName;
+    public String chatContent;
+    public String container;
+    public String chatTime;
 
     public int getHeadImg_id() {
         return headImg_id;
@@ -28,5 +31,5 @@ public class Chat_member {
         this.chatContent = chatContent;
     }
 
-    public String chatContent;
+
 }

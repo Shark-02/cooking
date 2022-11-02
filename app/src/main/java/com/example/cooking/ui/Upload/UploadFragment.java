@@ -37,10 +37,11 @@ public class UploadFragment extends Fragment {
         re_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().onBackPressed();//销毁自己，这里不能用finish()
+                //getActivity().onBackPressed();//销毁自己，这里不能用finish()
                 Log.d("1","btn is click");
                 Intent i = new Intent(getActivity(), Upload.class);
                 startActivity(i);
+                getActivity().finish();
             }
         });
         return vup;

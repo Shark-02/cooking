@@ -4,24 +4,24 @@
     <group android:id="@+id/group1">
         <item
             android:id="@+id/nav_draft"
-            android:icon="@drawable/add"
+            android:icon="@drawable/draft_icon"
             android:title="草稿箱" />
 
         <item
             android:id="@+id/nav_mycomment"
-            android:icon="@drawable/add"
+            android:icon="@drawable/mycomment"
             android:title="我的评价" />
 
         <item
             android:id="@+id/nav_mydone"
-            android:icon="@drawable/add"
+            android:icon="@drawable/ido_icon"
             android:title="已做过" />
     </group>
 
     <group android:id="@+id/group2">
         <item
             android:id="@+id/nav_settings"
-            android:icon="@drawable/add"
+            android:icon="@drawable/setup"
             android:title="设置" />
     </group>
 

@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/navigation_upload"
-        android:icon="@drawable/add"
+        android:icon="@drawable/icon_plus_mdpi"
         android:title="@string/title_upload" />
 
     <item

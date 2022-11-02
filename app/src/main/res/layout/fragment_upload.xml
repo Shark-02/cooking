@@ -7,7 +7,6 @@
     tools:context=".ui.Upload.UploadFragment">
 
 
-
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/up_hdpo"
         android:layout_width="@dimen/headimg_size"
@@ -18,14 +17,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278"
-        app:riv_oval="true"
-        />
+        app:layout_constraintVertical_bias="0.225"
+        app:riv_oval="true" />
 
     <ImageView
         android:id="@+id/banner"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
         android:src="@drawable/banner1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +32,8 @@
 
     <ImageView
         android:id="@+id/upload_recipe"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="60dp"
         android:src="@drawable/upload_recipe"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,8 +54,8 @@
 
     <ImageView
         android:id="@+id/upload_video"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/upload_video"
         app:layout_constraintBottom_toBottomOf="@id/upload_recipe"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,8 +76,8 @@
 
     <ImageView
         android:id="@+id/upload_img"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginStart="60dp"
         app:layout_constraintBottom_toBottomOf="@id/upload_recipe"
         app:layout_constraintStart_toEndOf="@id/upload_video"

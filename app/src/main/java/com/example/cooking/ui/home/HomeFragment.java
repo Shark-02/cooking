@@ -1,12 +1,22 @@
 package com.example.cooking.ui.home;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Data_view.DataGenerator;
 import com.example.cooking.Data_view.recipe;
 import com.example.cooking.MainActivity_bottom;
+import com.example.cooking.MatchActivity;
+import com.example.cooking.Menu;
+import com.example.cooking.MyChat;
+import com.example.cooking.MyComment;
+import com.example.cooking.MyDraft;
+import com.example.cooking.MyFinish;
 import com.example.cooking.R;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -37,11 +47,11 @@ import java.util.Random;
 public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
 
 
-    View root;
+    View root,itemView;
     Toolbar tb;
     DrawerLayout mDrawerLayout;
     NavigationView navViewStart;
-    ImageView iv;
+    ImageView iv,itemimg;
     List<recipe> data;
     MyAdapter ma;
     RecyclerView rcv;
@@ -74,6 +84,27 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
             Log.d("null","iv is not null");
         }
         NavigationView navigationview = root.findViewById(R.id.nav_view);
+        navigationview.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                int itemId = item.getItemId();
+                switch (itemId) {
+                    case R.id.nav_draft:
+                        Intent intent3 = new Intent(getActivity(), MyDraft.class);
+                        startActivity(intent3);
+                        break;
+                    case R.id.nav_mycomment:
+                        Intent intent = new Intent(getActivity(), MyComment.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_mydone:
+                        Intent intent2 = new Intent(getActivity(), MyFinish.class);
+                        startActivity(intent2);
+                        break;
+                }
+                return true;
+            }
+        });
         //mDrawerLayout.openDrawer(GravityCompat.START);
        /* iv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +138,7 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
             recipe rs = new recipe();
             rs.img_id = R.drawable.to_po;
             rs.title = "番茄炒蛋";
-            rs.content = "Content of " + data.size();
+            rs.content = "肚子好饿啊！ " + data.size();
             data.add(rs);
         }
         ma=new MyAdapter(R.layout.view_list_itemlayout,data);
@@ -115,6 +146,18 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         rcv.setLayoutManager(sm);
         rcv.setAdapter(ma);
+        //item点击事件
+        ma.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(@NonNull BaseQuickAdapter adapter, @NonNull View view, int position) {
+                //itemView=sm.getChildAt(position);
+                //itemimg=itemView.findViewById(R.id.item_img);
+                //Bitmap bitmap = ((BitmapDrawable)itemimg.getDrawable()).getBitmap();
+                Intent intent = new Intent(getActivity(), Menu.class);
+                //intent.putExtra("itemimg",bitmap);
+                startActivity(intent);
+            }
+        });
     }
 
 }
