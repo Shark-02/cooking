@@ -22,7 +22,7 @@
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_marginStart="24dp"
-        android:src="@drawable/back"
+        android:src="@drawable/white_back"
         app:layout_constraintBottom_toBottomOf="@+id/Ido"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/Ido"
