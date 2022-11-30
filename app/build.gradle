@@ -46,4 +46,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.10'
     implementation 'com.makeramen:roundedimageview:2.2.1'
+    api 'cn.rongcloud.sdk:im_kit:5.1.9'
 }

@@ -38,6 +38,7 @@ public class MainActivity_bottom extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main_bottom);
         NavInflater navInflater = navController.getNavInflater();
         NavGraph navGraph = navInflater.inflate(R.navigation.mobile_navigation);
+
         Intent intent=getIntent();
         jumpnum=intent.getIntExtra("fragment",1);
         switch (jumpnum){
@@ -47,6 +48,7 @@ public class MainActivity_bottom extends AppCompatActivity {
             case 3:
                 navGraph.setStartDestination(R.id.navigation_upload);
         }
+
         navController.setGraph(navGraph);
         NavigationUI.setupWithNavController(binding.navView, navController);
         ImageView select_ingredient=findViewById(R.id.choose_ingredient);

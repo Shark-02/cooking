@@ -10,12 +10,34 @@ import java.util.Timer;
 import java.util.TimerTask;
 import android.database.sqlite.SQLiteDatabase;
 
+import io.rong.imkit.RongIM;
+import io.rong.imkit.utils.RouteUtils;
+import io.rong.imlib.RongIMClient;
+
 public class MainActivity extends AppCompatActivity {
 
     private MyDatabaseHelper dbHelper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String token = "mwAl2co/dQcL3n74wA9P3fk3+H+NA/RppRr3qfv3eKM=@wczf.cn.rongnav.com;wczf.cn.rongcfg.com";
+        RongIM.connect(token, new RongIMClient.ConnectCallback() {
+            @Override
+            public void onSuccess(String userId) {
+                // 登录成功，跳转到默认会话列表页。
+                //RouteUtils.routeToConversationListActivity(MainActivity.this, "");
+            }
+
+            @Override
+            public void onError(RongIMClient.ConnectionErrorCode connectionErrorCode) {
+
+            }
+
+            @Override
+            public void onDatabaseOpened(RongIMClient.DatabaseOpenStatus databaseOpenStatus) {
+
+            }
+        });
         final Intent main = new Intent(this, MainActivity_bottom.class); // 要转向的Activity
 
         Timer timer = new Timer();
@@ -47,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        timer.schedule(task, 1000 * 3); // 3秒后执行
     }
 
 

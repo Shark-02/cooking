@@ -23,8 +23,6 @@
         android:label="@string/title_message"
         tools:layout="@layout/fragment_message" />
 
-
-
     <fragment
         android:id="@+id/navigation_upload"
         android:name="com.example.cooking.ui.Upload.UploadFragment"
