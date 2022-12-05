@@ -5,6 +5,7 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Data_view.DataGenerator;
 import com.example.cooking.Data_view.recipe;
+import com.example.cooking.FansActivity;
 import com.example.cooking.MainActivity_bottom;
 import com.example.cooking.MatchActivity;
 import com.example.cooking.Menu;
@@ -78,6 +79,8 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
     void SetupView(){
         tb=root.findViewById(R.id.home_tb);
         mDrawerLayout = root.findViewById(R.id.my_drawer);
+        root.findViewById(R.id.myconcern).setOnClickListener(v -> FansActivity.toMe(getContext(),1));
+        root.findViewById(R.id.myfans).setOnClickListener(v -> FansActivity.toMe(getContext(),0));
         iv=root.findViewById(R.id.open_drawer);
         //iv.setOnClickListener(this);
         if (iv!=null){

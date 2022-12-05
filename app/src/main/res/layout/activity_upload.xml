@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/myview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
     android:fillViewport="true"
     android:overScrollMode="never"
-    android:scrollbars="none"
-    android:layout_margin="16dp">
+    android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -32,16 +31,15 @@
             android:layout_marginTop="12dp"
             android:src="@drawable/shutdown"
             app:layout_constraintStart_toStartOf="@id/recipe_bar"
-            app:layout_constraintTop_toTopOf="@id/recipe_bar"
-            />
+            app:layout_constraintTop_toTopOf="@id/recipe_bar" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="存草稿"
             android:textColor="@color/theme"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/create_text"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.773"
             app:layout_constraintStart_toEndOf="@+id/create_text"
             app:layout_constraintTop_toTopOf="@id/create_text" />
@@ -62,11 +60,10 @@
             android:id="@+id/recipe_cover"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            app:layout_constraintTop_toBottomOf="@id/recipe_bar"
-            android:text= "诱人的封面图是吸引厨友的关键"
-            android:gravity="center"
             android:background="@color/gray"
-            />
+            android:gravity="center"
+            android:text="诱人的封面图是吸引厨友的关键"
+            app:layout_constraintTop_toBottomOf="@id/recipe_bar" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -84,11 +81,10 @@
             android:id="@+id/recipe_name"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:gravity="center"
             android:hint="菜谱名"
             android:textSize="@dimen/font_bar_title"
-            android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/recipe_cover"
-            />
+            app:layout_constraintTop_toBottomOf="@id/recipe_cover" />
 
         <EditText
             android:id="@+id/recipe_content"
@@ -101,94 +97,92 @@
             app:layout_constraintTop_toBottomOf="@id/recipe_name"
             app:layout_constraintVertical_bias="0.0"
             tools:layout_editor_absoluteX="16dp" />
-
-        <TextView
-            android:id="@+id/ingredient"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <LinearLayout
+            android:id="@+id/ll_more"
             app:layout_constraintTop_toBottomOf="@id/recipe_content"
-            android:text="用料\n"
-            android:textSize="@dimen/font_bar_title"
-            android:textColor="@color/black"
-            app:layout_constraintVertical_bias="0.0"
-            />
-
-        <EditText
-            android:id="@+id/ingre_input"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="@dimen/font_bar_title"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ingredient"
-            app:layout_constraintVertical_bias="0.0"
-            />
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="用料\n"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_bar_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+            <EditText
+                android:id="@+id/ingre_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/font_bar_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingredient"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/steps"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ingre_input"
-            android:text="步骤\n"
-            android:textSize="@dimen/font_bar_title"
-            android:textColor="@color/black"
-            app:layout_constraintVertical_bias="0.0"
-            />
+            <TextView
+                android:id="@+id/steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="步骤\n"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_bar_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingre_input"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <EditText
-            android:id="@+id/step_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="@dimen/font_bar_title"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/steps"
-            app:layout_constraintVertical_bias="0.0"
-            />
+            <EditText
+                android:id="@+id/step_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/font_bar_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/steps"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/cook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/step_input"
-            android:text="厨具\n"
-            android:textSize="@dimen/font_bar_title"
-            android:textColor="@color/black"
-            app:layout_constraintVertical_bias="0.0"
-            />
+            <TextView
+                android:id="@+id/cook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="厨具\n"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_bar_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/step_input"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <EditText
-            android:id="@+id/cook_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="@dimen/font_bar_title"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cook"
-            app:layout_constraintVertical_bias="0.0"
-            />
+            <EditText
+                android:id="@+id/cook_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/font_bar_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cook"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            app:layout_constraintTop_toBottomOf="@id/cook_input"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_more" />
 
         <Button
             android:id="@+id/upload_button"
             android:layout_width="200dp"
             android:layout_height="70dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:text="发布"
             android:textSize="@dimen/font_bar_title"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

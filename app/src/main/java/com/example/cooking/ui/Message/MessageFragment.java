@@ -2,11 +2,9 @@ package com.example.cooking.ui.Message;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -17,13 +15,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 
-import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Adapter.MyMessageAdapter;
+import com.example.cooking.CollectActivity;
+import com.example.cooking.CommentActivity;
 import com.example.cooking.Data_view.Chat_member;
 import com.example.cooking.Data_view.DataGenerator;
-import com.example.cooking.Data_view.recipe;
-import com.example.cooking.MatchActivity;
-import com.example.cooking.Menu;
+import com.example.cooking.FansActivity;
 import com.example.cooking.MyChat;
 import com.example.cooking.R;
 import com.example.cooking.databinding.FragmentMessageBinding;
@@ -47,6 +44,9 @@ public class MessageFragment extends Fragment {
 
         binding = FragmentMessageBinding.inflate(inflater, container, false);
         root = binding.getRoot();
+        binding.fansIcon.setOnClickListener(v -> FansActivity.toMe(getActivity(),0));
+        binding.collectionIcon.setOnClickListener(v -> startActivity(new Intent(getActivity(), CollectActivity.class)));
+        binding.commentIcon.setOnClickListener(v -> startActivity(new Intent(getActivity(), CommentActivity.class)));
         SetupView();
 
         return root;
@@ -58,23 +58,23 @@ public class MessageFragment extends Fragment {
         binding = null;
     }
 
-    void SetupView(){
-        cm_data= DataGenerator.genMessageData();
+    void SetupView() {
+        cm_data = DataGenerator.genMessageData();
 
-        int num= new Random().nextInt(20);
-        for (int i=0;i<num;i++){
+        int num = new Random().nextInt(20);
+        for (int i = 0; i < num; i++) {
             Chat_member cms = new Chat_member();
             cms.headImg_id = R.drawable.xs;
             cms.chatName = "孙瑜";
             //cms.chatContent = "Content of " + cm_data.size();
             cms.chatContent = "今天好无聊 " + cm_data.size();
-            cms.chatTime="11:11";
+            cms.chatTime = "11:11";
             cm_data.add(cms);
         }
 
-        mma=new MyMessageAdapter(R.layout.chat_view,cm_data);
+        mma = new MyMessageAdapter(R.layout.chat_view, cm_data);
 
-        rcv=root.findViewById(R.id.message_rcv);
+        rcv = root.findViewById(R.id.message_rcv);
         LinearLayoutManager layoutManager = new LinearLayoutManager(rcv.getContext());
         rcv.setLayoutManager(layoutManager);
         rcv.setAdapter(mma);
