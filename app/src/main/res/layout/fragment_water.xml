@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    tools:context=".ui.Fragment_meatt">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="300dp"
+        android:layout_height="00dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/pork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="饮料"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/kele"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/kele"
+                app:layout_constraintStart_toStartOf="@+id/pork"
+                app:layout_constraintTop_toBottomOf="@+id/pork" />
+
+            <ImageView
+                android:id="@+id/kele_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/kele_text"
+                app:layout_constraintStart_toStartOf="@+id/kele" />
+
+            <TextView
+                android:id="@+id/kele_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="可乐"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/kele"
+                app:layout_constraintStart_toStartOf="@+id/kele"
+                app:layout_constraintTop_toBottomOf="@+id/kele" />
+
+            <ImageView
+                android:id="@+id/xuebi"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/xuebi"
+                app:layout_constraintBottom_toBottomOf="@+id/kele"
+                app:layout_constraintStart_toEndOf="@+id/kele"
+                app:layout_constraintTop_toTopOf="@+id/kele"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/xuebi_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/xuebi_text"
+                app:layout_constraintStart_toStartOf="@+id/xuebi" />
+
+            <TextView
+                android:id="@+id/xuebi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="雪碧"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/xuebi"
+                app:layout_constraintStart_toStartOf="@+id/xuebi"
+                app:layout_constraintTop_toBottomOf="@+id/xuebi" />
+
+            <ImageView
+                android:id="@+id/chengzhi"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="130dp"
+                android:src="@drawable/chengzhi"
+                app:layout_constraintBottom_toBottomOf="@+id/kele"
+                app:layout_constraintStart_toEndOf="@+id/kele"
+                app:layout_constraintTop_toTopOf="@+id/kele"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/chengzhi_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/chengzhi_text"
+                app:layout_constraintStart_toStartOf="@+id/chengzhi" />
+
+            <TextView
+                android:id="@+id/chengzhi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="橙汁"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/chengzhi"
+                app:layout_constraintStart_toStartOf="@+id/chengzhi"
+                app:layout_constraintTop_toBottomOf="@+id/chengzhi" />
+
+            <ImageView
+                android:id="@+id/yezhi"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/yezhi"
+                app:layout_constraintEnd_toEndOf="@+id/kele"
+                app:layout_constraintStart_toStartOf="@+id/kele"
+                app:layout_constraintTop_toBottomOf="@+id/kele" />
+
+            <ImageView
+                android:id="@+id/yezhi_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/yezhi_text"
+                app:layout_constraintStart_toStartOf="@+id/yezhi" />
+
+            <TextView
+                android:id="@+id/yezhi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="椰汁"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/yezhi"
+                app:layout_constraintStart_toStartOf="@+id/yezhi"
+                app:layout_constraintTop_toBottomOf="@+id/yezhi" />
+
+            <ImageView
+                android:id="@+id/pingguocu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/pingguocu"
+                app:layout_constraintEnd_toEndOf="@+id/xuebi"
+                app:layout_constraintStart_toStartOf="@+id/xuebi"
+                app:layout_constraintTop_toBottomOf="@+id/xuebi" />
+
+            <ImageView
+                android:id="@+id/pingguocu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/pingguocu_text"
+                app:layout_constraintStart_toStartOf="@+id/pingguocu" />
+
+            <TextView
+                android:id="@+id/pingguocu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="苹果醋"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/pingguocu"
+                app:layout_constraintStart_toStartOf="@+id/pingguocu"
+                app:layout_constraintTop_toBottomOf="@+id/pingguocu" />
+
+
+            <TextView
+                android:id="@+id/beef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:text="酒水"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/pork"
+                app:layout_constraintHorizontal_bias="0.32"
+                app:layout_constraintStart_toStartOf="@+id/pork"
+                app:layout_constraintTop_toBottomOf="@+id/pork" />
+
+            <ImageView
+                android:id="@+id/baijiu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/baijiu"
+                app:layout_constraintStart_toStartOf="@+id/beef"
+                app:layout_constraintTop_toBottomOf="@+id/beef" />
+
+            <TextView
+                android:id="@+id/baijiu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="白酒"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/baijiu"
+                app:layout_constraintStart_toStartOf="@+id/baijiu"
+                app:layout_constraintTop_toBottomOf="@+id/baijiu" />
+
+            <ImageView
+                android:id="@+id/baijiu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/baijiu_text"
+                app:layout_constraintStart_toStartOf="@+id/baijiu" />
+
+            <ImageView
+                android:id="@+id/hongjiu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/hongjiu"
+                app:layout_constraintBottom_toBottomOf="@+id/baijiu"
+                app:layout_constraintStart_toEndOf="@+id/baijiu"
+                app:layout_constraintTop_toTopOf="@+id/baijiu"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/hongjiu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="红酒"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/hongjiu"
+                app:layout_constraintStart_toStartOf="@+id/hongjiu"
+                app:layout_constraintTop_toBottomOf="@+id/hongjiu" />
+
+            <ImageView
+                android:id="@+id/hongjiu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/hongjiu_text"
+                app:layout_constraintStart_toStartOf="@+id/hongjiu" />
+
+            <ImageView
+                android:id="@+id/jiweijiu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="130dp"
+                android:src="@drawable/jiweijiu"
+                app:layout_constraintBottom_toBottomOf="@+id/baijiu"
+                app:layout_constraintStart_toEndOf="@+id/baijiu"
+                app:layout_constraintTop_toTopOf="@+id/baijiu"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/jiweijiu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="鸡尾酒"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/jiweijiu"
+                app:layout_constraintStart_toStartOf="@+id/jiweijiu"
+                app:layout_constraintTop_toBottomOf="@+id/jiweijiu" />
+
+            <ImageView
+                android:id="@+id/jiweijiu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/jiweijiu_text"
+                app:layout_constraintStart_toStartOf="@+id/jiweijiu" />
+
+            <ImageView
+                android:id="@+id/baiputaojiu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/baiputaojiu"
+                app:layout_constraintEnd_toEndOf="@+id/baijiu"
+                app:layout_constraintStart_toStartOf="@+id/baijiu"
+                app:layout_constraintTop_toBottomOf="@+id/baijiu" />
+
+            <TextView
+                android:id="@+id/baiputaojiu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="白葡萄酒"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/baiputaojiu"
+                app:layout_constraintStart_toStartOf="@+id/baiputaojiu"
+                app:layout_constraintTop_toBottomOf="@+id/baiputaojiu" />
+
+            <ImageView
+                android:id="@+id/baiputaojiu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/baiputaojiu_text"
+                app:layout_constraintStart_toStartOf="@+id/baiputaojiu" />
+
+            <ImageView
+                android:id="@+id/xuelijiu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/xuelijiu"
+                app:layout_constraintEnd_toEndOf="@+id/hongjiu"
+                app:layout_constraintStart_toStartOf="@+id/hongjiu"
+                app:layout_constraintTop_toBottomOf="@+id/hongjiu" />
+
+            <TextView
+                android:id="@+id/xuelijiu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="雪莉酒"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/xuelijiu"
+                app:layout_constraintStart_toStartOf="@id/xuelijiu"
+                app:layout_constraintTop_toBottomOf="@+id/xuelijiu" />
+
+            <ImageView
+                android:id="@+id/xuelijiu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/xuelijiu_text"
+                app:layout_constraintStart_toStartOf="@+id/xuelijiu" />
+
+            <TextView
+                android:id="@+id/chicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:text="茶"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/beef"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/beef"
+                app:layout_constraintTop_toBottomOf="@id/beef" />
+
+            <ImageView
+                android:id="@+id/hongcha"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/hongcha"
+                app:layout_constraintStart_toStartOf="@+id/chicken"
+                app:layout_constraintTop_toBottomOf="@+id/chicken" />
+
+            <TextView
+                android:id="@+id/hongcha_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="红茶"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/hongcha"
+                app:layout_constraintStart_toStartOf="@+id/hongcha"
+                app:layout_constraintTop_toBottomOf="@+id/hongcha" />
+
+            <ImageView
+                android:id="@+id/hongcha_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/hongcha_text"
+                app:layout_constraintStart_toStartOf="@+id/hongcha" />
+
+            <ImageView
+                android:id="@+id/lvcha"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/lvcha"
+                app:layout_constraintBottom_toBottomOf="@+id/hongcha"
+                app:layout_constraintStart_toEndOf="@+id/hongcha"
+                app:layout_constraintTop_toTopOf="@+id/hongcha"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/lvcha_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="绿茶"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/lvcha"
+                app:layout_constraintStart_toStartOf="@+id/lvcha"
+                app:layout_constraintTop_toBottomOf="@+id/lvcha" />
+
+            <ImageView
+                android:id="@+id/lvcha_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/lvcha_text"
+                app:layout_constraintStart_toStartOf="@+id/lvcha" />
+
+            <ImageView
+                android:id="@+id/longjing"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="130dp"
+                android:src="@drawable/longjing"
+                app:layout_constraintBottom_toBottomOf="@+id/hongcha"
+                app:layout_constraintStart_toEndOf="@+id/hongcha"
+                app:layout_constraintTop_toTopOf="@+id/hongcha"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/longjing_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="龙井"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/longjing"
+                app:layout_constraintStart_toStartOf="@+id/longjing"
+                app:layout_constraintTop_toBottomOf="@+id/longjing" />
+
+            <ImageView
+                android:id="@+id/longjing_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/longjing_text"
+                app:layout_constraintStart_toStartOf="@+id/longjing" />
+
+            <ImageView
+                android:id="@+id/tieguanyin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/tieguanyin"
+                app:layout_constraintEnd_toEndOf="@+id/hongcha"
+                app:layout_constraintStart_toStartOf="@+id/hongcha"
+                app:layout_constraintTop_toBottomOf="@+id/hongcha" />
+
+            <TextView
+                android:id="@+id/tieguanyin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="铁观音"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/tieguanyin"
+                app:layout_constraintStart_toStartOf="@+id/tieguanyin"
+                app:layout_constraintTop_toBottomOf="@+id/tieguanyin" />
+
+            <ImageView
+                android:id="@+id/tieguanyin_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/tieguanyin_text"
+                app:layout_constraintStart_toStartOf="@+id/tieguanyin" />
+
+            <ImageView
+                android:id="@+id/puer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/puer"
+                app:layout_constraintEnd_toEndOf="@+id/lvcha"
+                app:layout_constraintStart_toStartOf="@+id/lvcha"
+                app:layout_constraintTop_toBottomOf="@+id/lvcha" />
+
+            <TextView
+                android:id="@+id/puer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="普洱"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/puer"
+                app:layout_constraintStart_toStartOf="@id/puer"
+                app:layout_constraintTop_toBottomOf="@+id/puer" />
+
+            <ImageView
+                android:id="@+id/puer_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/puer_text"
+                app:layout_constraintStart_toStartOf="@+id/puer" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="更多"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/pingguocu_text"
+                app:layout_constraintEnd_toEndOf="@+id/chengzhi"
+                app:layout_constraintStart_toStartOf="@+id/chengzhi"
+                app:layout_constraintTop_toBottomOf="@+id/xuebi_text" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="更多"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/xuelijiu_text"
+                app:layout_constraintStart_toStartOf="@+id/button2"
+                app:layout_constraintTop_toTopOf="@+id/xuelijiu" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="更多"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/puer_text"
+                app:layout_constraintStart_toStartOf="@+id/button2"
+                app:layout_constraintTop_toTopOf="@+id/puer" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

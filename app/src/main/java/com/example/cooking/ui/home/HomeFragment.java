@@ -44,7 +44,7 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.List;
 import java.util.Random;
 
-public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
+public class  HomeFragment extends Fragment /*implements View.OnClickListener*/ {
 
 
     View root,itemView;

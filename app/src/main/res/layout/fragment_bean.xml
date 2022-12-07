@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    tools:context=".ui.Fragment_bean">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="300dp"
+        android:layout_height="00dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/pork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="豆类"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias=".15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/heidou"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/heidou"
+                app:layout_constraintStart_toStartOf="@+id/pork"
+                app:layout_constraintTop_toBottomOf="@+id/pork" />
+
+            <ImageView
+                android:id="@+id/heidou_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/heidou_text"
+                app:layout_constraintStart_toStartOf="@+id/heidou" />
+
+            <TextView
+                android:id="@+id/heidou_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="黑豆"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/heidou"
+                app:layout_constraintStart_toStartOf="@+id/heidou"
+                app:layout_constraintTop_toBottomOf="@+id/heidou" />
+
+            <ImageView
+                android:id="@+id/hongdou"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/hongdou"
+                app:layout_constraintBottom_toBottomOf="@+id/heidou"
+                app:layout_constraintStart_toEndOf="@+id/heidou"
+                app:layout_constraintTop_toTopOf="@+id/heidou"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/hongdou_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/hongdou_text"
+                app:layout_constraintStart_toStartOf="@+id/hongdou" />
+
+            <TextView
+                android:id="@+id/hongdou_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="红豆"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/hongdou"
+                app:layout_constraintStart_toStartOf="@+id/hongdou"
+                app:layout_constraintTop_toBottomOf="@+id/hongdou" />
+
+            <ImageView
+                android:id="@+id/lvdou"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="130dp"
+                android:src="@drawable/lvdou"
+                app:layout_constraintBottom_toBottomOf="@+id/heidou"
+                app:layout_constraintStart_toEndOf="@+id/heidou"
+                app:layout_constraintTop_toTopOf="@+id/heidou"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/lvdou_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/lvdou_text"
+                app:layout_constraintStart_toStartOf="@+id/lvdou" />
+
+            <TextView
+                android:id="@+id/lvdou_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="绿豆"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/lvdou"
+                app:layout_constraintStart_toStartOf="@+id/lvdou"
+                app:layout_constraintTop_toBottomOf="@+id/lvdou" />
+
+            <ImageView
+                android:id="@+id/huangdou"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/huangdou"
+                app:layout_constraintEnd_toEndOf="@+id/heidou"
+                app:layout_constraintStart_toStartOf="@+id/heidou"
+                app:layout_constraintTop_toBottomOf="@+id/heidou" />
+
+            <ImageView
+                android:id="@+id/huangdou_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/huangdou_text"
+                app:layout_constraintStart_toStartOf="@+id/huangdou" />
+
+            <TextView
+                android:id="@+id/huangdou_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="黄豆"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/huangdou"
+                app:layout_constraintStart_toStartOf="@+id/huangdou"
+                app:layout_constraintTop_toBottomOf="@+id/huangdou" />
+
+            <ImageView
+                android:id="@+id/dadou"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/dadou"
+                app:layout_constraintEnd_toEndOf="@+id/hongdou"
+                app:layout_constraintStart_toStartOf="@+id/hongdou"
+                app:layout_constraintTop_toBottomOf="@+id/hongdou" />
+
+            <ImageView
+                android:id="@+id/dadou_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/dadou_text"
+                app:layout_constraintStart_toStartOf="@+id/dadou" />
+
+            <TextView
+                android:id="@+id/dadou_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="大豆"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/dadou"
+                app:layout_constraintStart_toStartOf="@+id/dadou"
+                app:layout_constraintTop_toBottomOf="@+id/dadou" />
+
+
+            <TextView
+                android:id="@+id/beef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:text="豆制品"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.32"
+                app:layout_constraintStart_toStartOf="@+id/pork"
+                app:layout_constraintTop_toBottomOf="@+id/pork" />
+
+            <ImageView
+                android:id="@+id/fuzhu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/fuzhu"
+                app:layout_constraintStart_toStartOf="@+id/beef"
+                app:layout_constraintTop_toBottomOf="@+id/beef" />
+
+            <TextView
+                android:id="@+id/fuzhu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="腐竹"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/fuzhu"
+                app:layout_constraintStart_toStartOf="@+id/fuzhu"
+                app:layout_constraintTop_toBottomOf="@+id/fuzhu" />
+
+            <ImageView
+                android:id="@+id/fuzhu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/fuzhu_text"
+                app:layout_constraintStart_toStartOf="@+id/fuzhu" />
+
+            <ImageView
+                android:id="@+id/dougan"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/dougan"
+                app:layout_constraintBottom_toBottomOf="@+id/fuzhu"
+                app:layout_constraintStart_toEndOf="@+id/fuzhu"
+                app:layout_constraintTop_toTopOf="@+id/fuzhu"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/dougan_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="豆干"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/dougan"
+                app:layout_constraintStart_toStartOf="@+id/dougan"
+                app:layout_constraintTop_toBottomOf="@+id/dougan" />
+
+            <ImageView
+                android:id="@+id/dougan_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/dougan_text"
+                app:layout_constraintStart_toStartOf="@+id/dougan" />
+
+            <ImageView
+                android:id="@+id/neizhidoufu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="130dp"
+                android:src="@drawable/neizhidoufu"
+                app:layout_constraintBottom_toBottomOf="@+id/fuzhu"
+                app:layout_constraintStart_toEndOf="@+id/fuzhu"
+                app:layout_constraintTop_toTopOf="@+id/fuzhu"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/neizhidoufu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="内酯豆腐"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/neizhidoufu"
+                app:layout_constraintStart_toStartOf="@+id/neizhidoufu"
+                app:layout_constraintTop_toBottomOf="@+id/neizhidoufu" />
+
+            <ImageView
+                android:id="@+id/neizhidoufu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/neizhidoufu_text"
+                app:layout_constraintStart_toStartOf="@+id/neizhidoufu" />
+
+            <ImageView
+                android:id="@+id/furu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/furu"
+                app:layout_constraintEnd_toEndOf="@+id/fuzhu"
+                app:layout_constraintStart_toStartOf="@+id/fuzhu"
+                app:layout_constraintTop_toBottomOf="@+id/fuzhu" />
+
+            <TextView
+                android:id="@+id/furu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="腐乳"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/furu"
+                app:layout_constraintStart_toStartOf="@+id/furu"
+                app:layout_constraintTop_toBottomOf="@+id/furu" />
+
+            <ImageView
+                android:id="@+id/furu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/furu_text"
+                app:layout_constraintStart_toStartOf="@+id/furu" />
+
+            <ImageView
+                android:id="@+id/nendoufu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/nendoufu"
+                app:layout_constraintEnd_toEndOf="@+id/dougan"
+                app:layout_constraintStart_toStartOf="@+id/dougan"
+                app:layout_constraintTop_toBottomOf="@+id/dougan" />
+
+            <TextView
+                android:id="@+id/nendoufu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="嫩豆腐"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/nendoufu"
+                app:layout_constraintStart_toStartOf="@id/nendoufu"
+                app:layout_constraintTop_toBottomOf="@+id/nendoufu" />
+
+            <ImageView
+                android:id="@+id/nendoufu_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/nendoufu_text"
+                app:layout_constraintStart_toStartOf="@+id/nendoufu" />
+
+            <TextView
+                android:id="@+id/chicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:text="乳类"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/beef"
+                app:layout_constraintTop_toBottomOf="@id/beef" />
+
+            <ImageView
+                android:id="@+id/dannaiyou"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/dannaiyou"
+                app:layout_constraintStart_toStartOf="@+id/chicken"
+                app:layout_constraintTop_toBottomOf="@+id/chicken" />
+
+            <TextView
+                android:id="@+id/dannaiyou_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="淡奶油"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/dannaiyou"
+                app:layout_constraintStart_toStartOf="@+id/dannaiyou"
+                app:layout_constraintTop_toBottomOf="@+id/dannaiyou" />
+
+            <ImageView
+                android:id="@+id/dannaiyou_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/dannaiyou_text"
+                app:layout_constraintStart_toStartOf="@+id/dannaiyou" />
+
+            <ImageView
+                android:id="@+id/huangyou"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/huangyou"
+                app:layout_constraintBottom_toBottomOf="@+id/dannaiyou"
+                app:layout_constraintStart_toEndOf="@+id/dannaiyou"
+                app:layout_constraintTop_toTopOf="@+id/dannaiyou"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/huangyou_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="黄油"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/huangyou"
+                app:layout_constraintStart_toStartOf="@+id/huangyou"
+                app:layout_constraintTop_toBottomOf="@+id/huangyou" />
+
+            <ImageView
+                android:id="@+id/huangyou_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/huangyou_text"
+                app:layout_constraintStart_toStartOf="@+id/huangyou" />
+
+            <ImageView
+                android:id="@+id/naifen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="130dp"
+                android:src="@drawable/naifen"
+                app:layout_constraintBottom_toBottomOf="@+id/dannaiyou"
+                app:layout_constraintStart_toEndOf="@+id/dannaiyou"
+                app:layout_constraintTop_toTopOf="@+id/dannaiyou"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/naifen_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="奶粉"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/naifen"
+                app:layout_constraintStart_toStartOf="@+id/naifen"
+                app:layout_constraintTop_toBottomOf="@+id/naifen" />
+
+            <ImageView
+                android:id="@+id/naifen_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/naifen_text"
+                app:layout_constraintStart_toStartOf="@+id/naifen" />
+
+            <ImageView
+                android:id="@+id/masulilanailao"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/masulilanailao"
+                app:layout_constraintEnd_toEndOf="@+id/dannaiyou"
+                app:layout_constraintStart_toStartOf="@+id/dannaiyou"
+                app:layout_constraintTop_toBottomOf="@+id/dannaiyou" />
+
+            <TextView
+                android:id="@+id/masulilanailao_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="马苏里拉奶酪"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/masulilanailao"
+                app:layout_constraintStart_toStartOf="@+id/masulilanailao"
+                app:layout_constraintTop_toBottomOf="@+id/masulilanailao" />
+
+            <ImageView
+                android:id="@+id/masulilanailao_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/masulilanailao_text"
+                app:layout_constraintStart_toStartOf="@+id/masulilanailao" />
+
+            <ImageView
+                android:id="@+id/naiyounailao"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/naiyounailao"
+                app:layout_constraintEnd_toEndOf="@+id/huangyou"
+                app:layout_constraintStart_toStartOf="@+id/huangyou"
+                app:layout_constraintTop_toBottomOf="@+id/huangyou" />
+
+            <TextView
+                android:id="@+id/naiyounailao_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="奶油奶酪"
+                android:textColor="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@+id/naiyounailao"
+                app:layout_constraintStart_toStartOf="@id/naiyounailao"
+                app:layout_constraintTop_toBottomOf="@+id/naiyounailao" />
+
+            <ImageView
+                android:id="@+id/naiyounailao_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toTopOf="@+id/naiyounailao_text"
+                app:layout_constraintStart_toStartOf="@+id/naiyounailao" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="更多"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/dadou_text"
+                app:layout_constraintEnd_toEndOf="@+id/lvdou"
+                app:layout_constraintStart_toStartOf="@+id/lvdou"
+                app:layout_constraintTop_toBottomOf="@+id/hongdou_text" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="更多"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/nendoufu_text"
+                app:layout_constraintStart_toStartOf="@+id/button2"
+                app:layout_constraintTop_toTopOf="@+id/nendoufu" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="更多"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/naiyounailao_text"
+                app:layout_constraintStart_toStartOf="@+id/button2"
+                app:layout_constraintTop_toTopOf="@+id/naiyounailao" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
