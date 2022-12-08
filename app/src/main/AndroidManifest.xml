@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Cooking"
         tools:targetApi="31">
         <activity
-            android:name=".FansActivity"
+            android:name=".MyFans"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -135,7 +135,11 @@
                 android:value="" />
         </activity>
         <activity android:name="com.example.cooking.CommentActivity" />
-        <activity android:name="com.example.cooking.CollectActivity" />
+        <activity android:name="com.example.cooking.MyCollect" />
+        <activity android:name="com.example.cooking.MyFansMessage" />
+        <activity android:name="com.example.cooking.MyFollow" />
+        <activity android:name="com.example.cooking.UploadVideo" />
+        <activity android:name="com.example.cooking.UploadImage" />
     </application>
 
 </manifest>

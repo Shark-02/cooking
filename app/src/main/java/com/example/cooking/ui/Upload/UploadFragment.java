@@ -19,6 +19,8 @@ import android.widget.ImageView;
 
 import com.example.cooking.R;
 import com.example.cooking.Upload;
+import com.example.cooking.UploadImage;
+import com.example.cooking.UploadVideo;
 
 public class UploadFragment extends Fragment {
 
@@ -37,13 +39,13 @@ public class UploadFragment extends Fragment {
         vup.findViewById(R.id.upload_video).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Upload.ToMe(getContext(), 1);
+              startActivity(new Intent(getActivity(), UploadVideo.class));
             }
         });
         vup.findViewById(R.id.upload_img).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Upload.ToMe(getContext(), 2);
+                startActivity(new Intent(getActivity(), UploadImage.class));
             }
         });
         re_up.setOnClickListener(new View.OnClickListener() {

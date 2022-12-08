@@ -67,16 +67,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+菜谱封面（或一分钟小视频）"
+                    android:text="+点击上传视频"
                     android:textColor="@color/black"
                     android:textSize="@dimen/recipe_small_size" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/iv_image"
+                android:scaleType="centerCrop"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop" />
+                android:layout_height="match_parent" />
         </RelativeLayout>
 
 
@@ -85,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center"
-            android:hint="菜谱名"
+            android:hint="标题"
             android:textSize="@dimen/font_bar_title" />
 
         <EditText
@@ -93,48 +93,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:hint="输入这道美食背后的故事"
+            android:hint="简介"
             android:textSize="@dimen/font_bar_title" />
 
 
         <TextView
-            android:id="@+id/ingredient"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="用料\n"
-            android:textColor="@color/black"
-            android:textSize="@dimen/font_bar_title" />
-
-        <EditText
-            android:id="@+id/ingre_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="@dimen/font_bar_title" />
-
-        <TextView
-            android:id="@+id/steps"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="步骤\n"
-            android:textColor="@color/black"
-            android:textSize="@dimen/font_bar_title" />
-
-        <EditText
-            android:id="@+id/step_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="@dimen/font_bar_title" />
-
-        <TextView
-            android:id="@+id/cook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="厨具\n"
-            android:textColor="@color/black"
-            android:textSize="@dimen/font_bar_title"/>
-
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/upload_button"
