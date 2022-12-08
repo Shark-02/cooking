@@ -20,7 +20,9 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="dddd8dd0-079d-4f77-9750-050c92257fae" object-ref="schemas/main/tables/Step" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="dddd8dd0-079d-4f77-9750-050c92257fae" dataset="main.User" active-filter-id="EMPTY_FILTER" />
@@ -36,7 +38,7 @@
       <connection id="dddd8dd0-079d-4f77-9750-050c92257fae" active="true" signed="true">
         <database>
           <name value="Connection" />
-          <description value="" />
+          <description value="C:\Users\86180\AppData\Local\Google\AndroidStudio2021.2\device-explorer\emulator-5554\data\data\com.example.cooking\databases" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
           <database-version value="3.39" />
@@ -48,7 +50,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="" schema="main" />
+            <file path="D:\桌面\Cooking.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
