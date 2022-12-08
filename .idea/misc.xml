@@ -22,11 +22,12 @@
         <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_seafood.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_spice.xml" value="0.2" />
         <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_vegetable.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_water.xml" value="0.4" />
+        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_water.xml" value="0.264" />
         <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/myhome_drawer.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/view_list_itemlayout.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.136" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/nav_menu_right.xml" value="0.1125" />
+        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/ingredient_menu.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/nav_menu_right.xml" value="0.2" />
       </map>
     </option>
   </component>

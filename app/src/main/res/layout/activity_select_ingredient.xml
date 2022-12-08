@@ -63,158 +63,6 @@
     </LinearLayout>
 
 
-
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="100dp"
-        android:layout_height="00dp"
-        android:layout_weight="1"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_bg"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/gray_4">
-
-
-            <TextView
-                android:id="@+id/hot_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:text="时令热门"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="23sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/meat_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="肉类"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/hot_text"
-                app:layout_constraintStart_toStartOf="@+id/hot_text"
-                app:layout_constraintTop_toBottomOf="@+id/hot_text"
-                />
-            <TextView
-                android:id="@+id/seafood_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="水产"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/meat_text"
-                app:layout_constraintStart_toStartOf="@+id/meat_text"
-                app:layout_constraintTop_toBottomOf="@+id/meat_text"
-                />
-            <TextView
-                android:id="@+id/vegetable_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="蔬菜"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/seafood_text"
-                app:layout_constraintStart_toStartOf="@+id/seafood_text"
-                app:layout_constraintTop_toBottomOf="@+id/seafood_text"
-                />
-            <TextView
-                android:id="@+id/fruit_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="果品菌菇"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/vegetable_text"
-                app:layout_constraintStart_toStartOf="@+id/vegetable_text"
-                app:layout_constraintTop_toBottomOf="@+id/vegetable_text"
-                />
-
-            <TextView
-                android:id="@+id/rice_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="米面粉"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/fruit_text"
-                app:layout_constraintStart_toStartOf="@+id/fruit_text"
-                app:layout_constraintTop_toBottomOf="@+id/fruit_text"
-                />
-            <TextView
-                android:id="@+id/bean_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="豆乳"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/rice_text"
-                app:layout_constraintStart_toStartOf="@+id/rice_text"
-                app:layout_constraintTop_toBottomOf="@+id/rice_text"
-                />
-            <TextView
-                android:id="@+id/spice_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="调味品"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/bean_text"
-                app:layout_constraintStart_toStartOf="@+id/bean_text"
-                app:layout_constraintTop_toBottomOf="@+id/bean_text"
-                />
-            <TextView
-                android:id="@+id/oil_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="食用油"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/spice_text"
-                app:layout_constraintStart_toStartOf="@+id/spice_text"
-                app:layout_constraintTop_toBottomOf="@+id/spice_text"
-                />
-            <TextView
-                android:id="@+id/water_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="酒水茶饮"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/oil_text"
-                app:layout_constraintStart_toStartOf="@+id/oil_text"
-                app:layout_constraintTop_toBottomOf="@+id/oil_text"
-                />
-            <TextView
-                android:id="@+id/others_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="其他"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="50dp"
-                app:layout_constraintEnd_toEndOf="@+id/water_text"
-                app:layout_constraintStart_toStartOf="@+id/water_text"
-                app:layout_constraintTop_toBottomOf="@+id/water_text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                />
-
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
-
     <LinearLayout
         android:orientation = "horizontal"
         android:id="@+id/linearLayout2"
@@ -246,5 +94,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/select_finish"
         app:layout_constraintVertical_bias=".8" />
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/select_bg"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:navGraph="@navigation/select_ingredient" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/ingredient_navigation"
+        android:layout_width="110dp"
+        android:layout_height="550dp"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="none"
+        android:background="#FFF"
+        app:layout_constraintTop_toBottomOf="@+id/select_bg"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/ingredient_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

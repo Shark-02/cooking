@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragment_hot"
+        android:title="时令热门"/>
+    <item
+        android:id="@+id/fragment_meatt"
+        android:title="肉类"/>
+    <item
+        android:id="@+id/fragment_seafood"
+        android:title="水产"/>
+    <item
+        android:id="@+id/fragment_vegetable"
+        android:title="蔬菜"/>
+    <item
+        android:id="@+id/fragment_fruit"
+        android:title="果品菌菇"/>
+    <item
+        android:id="@+id/fragment_rice"
+        android:title="米面粉"/>
+    <item
+        android:id="@+id/fragment_bean2"
+        android:title="豆乳"/>
+    <item
+        android:id="@+id/fragment_spice"
+        android:title="调味品"/>
+    <item
+        android:id="@+id/fragment_oil"
+        android:title="食用油"/>
+    <item
+        android:id="@+id/fragment_water"
+        android:title="酒水茶饮"/>
+    <item
+        android:id="@+id/fragment_others"
+        android:title="其他"/>
+
+</menu>

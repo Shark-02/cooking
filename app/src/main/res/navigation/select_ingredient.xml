@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/select_ingredient"
+    app:startDestination="@id/fragment_hot">
+
+    <fragment
+        android:id="@+id/fragment_hot"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_hot"
+        android:label="fragment_hot"
+        tools:layout="@layout/fragment_hot" />
+    <fragment
+        android:id="@+id/fragment_meatt"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_meatt"
+        android:label="Fragment_meatt" />
+    <fragment
+        android:id="@+id/fragment_seafood"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_seafood"
+        android:label="Fragment_seafood" />
+    <fragment
+        android:id="@+id/fragment_vegetable"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_vegetable"
+        android:label="Fragment_vegetable" />
+    <fragment
+        android:id="@+id/fragment_fruit"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_fruit"
+        android:label="Fragment_fruit" />
+    <fragment
+        android:id="@+id/fragment_rice"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_rice"
+        android:label="Fragment_rice" />
+    <fragment
+        android:id="@+id/fragment_bean2"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_bean"
+        android:label="Fragment_bean" />
+    <fragment
+        android:id="@+id/fragment_spice"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_spice"
+        android:label="Fragment_spice" />
+    <fragment
+        android:id="@+id/fragment_oil"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_oil"
+        android:label="Fragment_oil" />
+    <fragment
+        android:id="@+id/fragment_water"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_water"
+        android:label="Fragment_water" />
+    <fragment
+        android:id="@+id/fragment_others"
+        android:name="com.example.cooking.ui.Ingredient.Fragment_others"
+        android:label="Fragment_others" />
+</navigation>
