@@ -24,9 +24,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             //primary key 将id列设为主键    autoincrement表示id列是自增长的
             "menu_id integer primary key autoincrement," +
             "cover integer," +
-            "title string," +
+            "title String," +
             "user_id integer," +
-            "introduction string)";
+            "introduction String)";
     public static final String DELETE_pic ="DROP TABLE IF EXISTS Picture";
     public static final String DELETE_Ingredient ="DROP TABLE IF EXISTS Ingredient";
     public static final String DELETE_Finish ="DROP TABLE IF EXISTS Finish";
@@ -51,8 +51,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_Menu);
         ContentValues values=new ContentValues();
         ContentValues values1=new ContentValues();
+        ContentValues values2=new ContentValues();
         //db.beginTransaction();
-        db.beginTransaction();
+        //db.beginTransaction();
         values.put("pic","C:/cooking/img/xcfn_cover.jpg");
         db.insert("Picture",null,values);
         values.put("pic","C:/cooking/img/fwqz_cover.jpg");
@@ -1623,256 +1624,256 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values1.put("name","牛至");
         db.insert("Ingredient",null,values1);
 
-        values.put("menu_id",1);
-        values.put("cover",1);
-        values.put("title","白灼香菜肥牛");
-        values.put("user_id",1);
-        values.put("introduction","超受欢迎的香菜拌肥牛~快速简单美味！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",1);
+        values2.put("cover",1);
+        values2.put("title","白灼香菜肥牛");
+        values2.put("user_id",1);
+        values2.put("introduction","超受欢迎的香菜拌肥牛~快速简单美味！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",2);
-        values.put("cover",2);
-        values.put("title","风味茄子");
-        values.put("user_id",1);
-        values.put("introduction","麻辣鲜香带一丢丢酸甜，好吃到词穷！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",2);
+        values2.put("cover",2);
+        values2.put("title","风味茄子");
+        values2.put("user_id",1);
+        values2.put("introduction","麻辣鲜香带一丢丢酸甜，好吃到词穷！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",3);
-        values.put("cover",3);
-        values.put("title","可乐鸡翅");
-        values.put("user_id",1);
-        values.put("introduction","我能炫十个！！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",3);
+        values2.put("cover",3);
+        values2.put("title","可乐鸡翅");
+        values2.put("user_id",1);
+        values2.put("introduction","我能炫十个！！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",4);
-        values.put("cover",4);
-        values.put("title","梅菜扣肉");
-        values.put("user_id",1);
-        values.put("introduction","看朋友圈晒酒席的时候看到这道菜就馋了，吃了还想做。煎猪皮的时候要小心被油溅到哦~");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",4);
+        values2.put("cover",4);
+        values2.put("title","梅菜扣肉");
+        values2.put("user_id",1);
+        values2.put("introduction","看朋友圈晒酒席的时候看到这道菜就馋了，吃了还想做。煎猪皮的时候要小心被油溅到哦~");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",5);
-        values.put("cover",5);
-        values.put("title","向日葵水蒸蛋");
-        values.put("user_id",1);
-        values.put("introduction","春天是一个充满活力的季节，到处都是绿茵茵的小草和快开的小花花，今天就安排一个向日葵小花花的水蒸蛋，嫩滑爽口，花花好看养眼～");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",5);
+        values2.put("cover",5);
+        values2.put("title","向日葵水蒸蛋");
+        values2.put("user_id",1);
+        values2.put("introduction","春天是一个充满活力的季节，到处都是绿茵茵的小草和快开的小花花，今天就安排一个向日葵小花花的水蒸蛋，嫩滑爽口，花花好看养眼～");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",6);
-        values.put("cover",6);
-        values.put("title","番茄荷包蛋焖面");
-        values.put("user_id",1);
-        values.put("introduction","汤汁浓郁，好吃过瘾的番茄荷包蛋焖面！早上来上一碗，开启元气满满的一天，香喷喷的荷包蛋，裹满浓郁的番茄汁，咬下去一口真的太满足了！做法简单！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",6);
+        values2.put("cover",6);
+        values2.put("title","番茄荷包蛋焖面");
+        values2.put("user_id",1);
+        values2.put("introduction","汤汁浓郁，好吃过瘾的番茄荷包蛋焖面！早上来上一碗，开启元气满满的一天，香喷喷的荷包蛋，裹满浓郁的番茄汁，咬下去一口真的太满足了！做法简单！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",7);
-        values.put("cover",7);
-        values.put("title","凉拌面");
-        values.put("user_id",1);
-        values.put("introduction","秋老虎，闷热的天气，没什么胃口，赶紧安排个酸辣口的很开胃～酸辣凉拌面！专治没胃口，酸辣面条搭配爽口黄瓜丝，还有酥脆的花生米，嗦的一口～太幸福了！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",7);
+        values2.put("cover",7);
+        values2.put("title","凉拌面");
+        values2.put("user_id",1);
+        values2.put("introduction","秋老虎，闷热的天气，没什么胃口，赶紧安排个酸辣口的很开胃～酸辣凉拌面！专治没胃口，酸辣面条搭配爽口黄瓜丝，还有酥脆的花生米，嗦的一口～太幸福了！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",8);
-        values.put("cover",8);
-        values.put("title","妈妈汤面");
-        values.put("user_id",1);
-        values.put("introduction","以前我煮汤面就是很清汤寡水，没什么美味。但是每次回家妈妈煮的汤面就是很不一样很好吃！于是我就偷师了哈哈！汤面的汤真的是精髓\n" +
+        values2.put("menu_id",8);
+        values2.put("cover",8);
+        values2.put("title","妈妈汤面");
+        values2.put("user_id",1);
+        values2.put("introduction","以前我煮汤面就是很清汤寡水，没什么美味。但是每次回家妈妈煮的汤面就是很不一样很好吃！于是我就偷师了哈哈！汤面的汤真的是精髓\n" +
                 "除了面以外，其他的食材可以替换其他自己喜欢的\n" +
                 "另外值得一提的是加点紫菜会好吃很多！！\n");
-        db.insert("Menu",null,values);
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",9);
-        values.put("cover",9);
-        values.put("title","麻酱拌面皮");
-        values.put("user_id",1);
-        values.put("introduction","零难度的麻酱拌面皮，好吃到飞");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",9);
+        values2.put("cover",9);
+        values2.put("title","麻酱拌面皮");
+        values2.put("user_id",1);
+        values2.put("introduction","零难度的麻酱拌面皮，好吃到飞");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",10);
-        values.put("cover",10);
-        values.put("title","奶油蘑菇培根意大利面");
-        values.put("user_id",1);
-        values.put("introduction","两人份，煮面的时候可以准备其他，最后也可以放芝士片");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",10);
+        values2.put("cover",10);
+        values2.put("title","奶油蘑菇培根意大利面");
+        values2.put("user_id",1);
+        values2.put("introduction","两人份，煮面的时候可以准备其他，最后也可以放芝士片");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",11);
-        values.put("cover",11);
-        values.put("title","酱牛肉");
-        values.put("user_id",1);
-        values.put("introduction","好吃！简单！扔锅直接煮！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",11);
+        values2.put("cover",11);
+        values2.put("title","酱牛肉");
+        values2.put("user_id",1);
+        values2.put("introduction","好吃！简单！扔锅直接煮！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",12);
-        values.put("cover",12);
-        values.put("title","飘香肘子");
-        values.put("user_id",1);
-        values.put("introduction","家宴上的经典菜，平时也要安排起来！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",12);
+        values2.put("cover",12);
+        values2.put("title","飘香肘子");
+        values2.put("user_id",1);
+        values2.put("introduction","家宴上的经典菜，平时也要安排起来！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",13);
-        values.put("cover",13);
-        values.put("title","清蒸大闸蟹");
-        values.put("user_id",1);
-        values.put("introduction","");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",13);
+        values2.put("cover",13);
+        values2.put("title","清蒸大闸蟹");
+        values2.put("user_id",1);
+        values2.put("introduction","");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",14);
-        values.put("cover",14);
-        values.put("title","椒盐鸡腿");
-        values.put("user_id",1);
-        values.put("introduction","");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",14);
+        values2.put("cover",14);
+        values2.put("title","椒盐鸡腿");
+        values2.put("user_id",1);
+        values2.put("introduction","");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",15);
-        values.put("cover",15);
-        values.put("title","西葫芦鸡蛋蒸包");
-        values.put("user_id",1);
-        values.put("introduction","低脂低卡，免揉面，好吃到哭");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",15);
+        values2.put("cover",15);
+        values2.put("title","西葫芦鸡蛋蒸包");
+        values2.put("user_id",1);
+        values2.put("introduction","低脂低卡，免揉面，好吃到哭");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",16);
-        values.put("cover",16);
-        values.put("title","脆皮炸鸡翅");
-        values.put("user_id",1);
-        values.put("introduction","谁不爱炸鸡呢");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",16);
+        values2.put("cover",16);
+        values2.put("title","脆皮炸鸡翅");
+        values2.put("user_id",1);
+        values2.put("introduction","谁不爱炸鸡呢");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",17);
-        values.put("cover",17);
-        values.put("title","炸薯饼");
-        values.put("user_id",1);
-        values.put("introduction","炸得香香脆脆的太美味啦！土豆真的无论怎么做都吃不腻！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",17);
+        values2.put("cover",17);
+        values2.put("title","炸薯饼");
+        values2.put("user_id",1);
+        values2.put("introduction","炸得香香脆脆的太美味啦！土豆真的无论怎么做都吃不腻！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",18);
-        values.put("cover",18);
-        values.put("title","蒜香炸排骨");
-        values.put("user_id",1);
-        values.put("introduction","喜欢的友友们一起来动手做吧，好吃到停不下来！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",18);
+        values2.put("cover",18);
+        values2.put("title","蒜香炸排骨");
+        values2.put("user_id",1);
+        values2.put("introduction","喜欢的友友们一起来动手做吧，好吃到停不下来！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",19);
-        values.put("cover",19);
-        values.put("title","干炸小酥肉");
-        values.put("user_id",1);
-        values.put("introduction","炸鸡块、炸鸡腿啥的都弱爆了，还是炸酥肉最香！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",19);
+        values2.put("cover",19);
+        values2.put("title","干炸小酥肉");
+        values2.put("user_id",1);
+        values2.put("introduction","炸鸡块、炸鸡腿啥的都弱爆了，还是炸酥肉最香！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",20);
-        values.put("cover",20);
-        values.put("title","酥炸凤尾虾");
-        values.put("user_id",1);
-        values.put("introduction","馋到你了吗？心动就行动吧！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",20);
+        values2.put("cover",20);
+        values2.put("title","酥炸凤尾虾");
+        values2.put("user_id",1);
+        values2.put("introduction","馋到你了吗？心动就行动吧！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",21);
-        values.put("cover",21);
-        values.put("title","白菜豆腐汤");
-        values.put("user_id",1);
-        values.put("introduction","简单操作，新手小白也能一次性成功！！喝起来就是小时候妈妈做的味道呀。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",21);
+        values2.put("cover",21);
+        values2.put("title","白菜豆腐汤");
+        values2.put("user_id",1);
+        values2.put("introduction","简单操作，新手小白也能一次性成功！！喝起来就是小时候妈妈做的味道呀。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",22);
-        values.put("cover",22);
-        values.put("title","西红柿鸡蛋汤");
-        values.put("user_id",1);
-        values.put("introduction","家常汤品。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",22);
+        values2.put("cover",22);
+        values2.put("title","西红柿鸡蛋汤");
+        values2.put("user_id",1);
+        values2.put("introduction","家常汤品。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",23);
-        values.put("cover",23);
-        values.put("title","冬瓜丸子汤");
-        values.put("user_id",1);
-        values.put("introduction","喝水不如喝汤。冬瓜丸子汤，浓香不油腻、鲜美可口。冬瓜性味甘、淡、有利尿、清热、化痰、解渴等功效，其中糖类，维生素含量均较高且不含脂肪，最适合这个季节吃了！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",23);
+        values2.put("cover",23);
+        values2.put("title","冬瓜丸子汤");
+        values2.put("user_id",1);
+        values2.put("introduction","喝水不如喝汤。冬瓜丸子汤，浓香不油腻、鲜美可口。冬瓜性味甘、淡、有利尿、清热、化痰、解渴等功效，其中糖类，维生素含量均较高且不含脂肪，最适合这个季节吃了！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",24);
-        values.put("cover",24);
-        values.put("title","奶油蘑菇汤");
-        values.put("user_id",1);
-        values.put("introduction","吃西餐偶然间爱上了这道奶油蘑菇汤，奶香浓郁，回味悠然，自己也可以在家做，非常的简单。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",24);
+        values2.put("cover",24);
+        values2.put("title","奶油蘑菇汤");
+        values2.put("user_id",1);
+        values2.put("introduction","吃西餐偶然间爱上了这道奶油蘑菇汤，奶香浓郁，回味悠然，自己也可以在家做，非常的简单。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",25);
-        values.put("cover",25);
-        values.put("title","南瓜土豆汤");
-        values.put("user_id",1);
-        values.put("introduction","从小到大一直喜欢吃老妈做的南瓜土豆汤，南瓜软糯甘甜，土豆绵软细腻，汤水滋味浓郁.……百吃不厌。那是一种记忆中难以忘怀的味道，因为映射了一段时光，也承载了一段回忆。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",25);
+        values2.put("cover",25);
+        values2.put("title","南瓜土豆汤");
+        values2.put("user_id",1);
+        values2.put("introduction","从小到大一直喜欢吃老妈做的南瓜土豆汤，南瓜软糯甘甜，土豆绵软细腻，汤水滋味浓郁.……百吃不厌。那是一种记忆中难以忘怀的味道，因为映射了一段时光，也承载了一段回忆。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",26);
-        values.put("cover",26);
-        values.put("title","黄油小花曲奇");
-        values.put("user_id",1);
-        values.put("introduction","又是一年圣诞节，每年的圣诞节都会跟朋友们在家里聚会，布置餐桌，点上蜡烛，忙活着做甜点，小花曲奇是最不能少的，孩子们一会能能吃掉好几盘，这次选择了\n" +
+        values2.put("menu_id",26);
+        values2.put("cover",26);
+        values2.put("title","黄油小花曲奇");
+        values2.put("user_id",1);
+        values2.put("introduction","又是一年圣诞节，每年的圣诞节都会跟朋友们在家里聚会，布置餐桌，点上蜡烛，忙活着做甜点，小花曲奇是最不能少的，孩子们一会能能吃掉好几盘，这次选择了\n" +
                 "安佳奶油做的小花曲奇更酥更香了~而且超级简单，烘焙小白也可以做哦！\n");
-        db.insert("Menu",null,values);
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",27);
-        values.put("cover",27);
-        values.put("title","八寸戚风蛋糕");
-        values.put("user_id",1);
-        values.put("introduction","戚风是很多新入坑的小伙伴必做的一款蛋糕，组织蓬松细腻，如云朵般轻柔，深受大家的喜欢。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",27);
+        values2.put("cover",27);
+        values2.put("title","八寸戚风蛋糕");
+        values2.put("user_id",1);
+        values2.put("introduction","戚风是很多新入坑的小伙伴必做的一款蛋糕，组织蓬松细腻，如云朵般轻柔，深受大家的喜欢。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",28);
-        values.put("cover",28);
-        values.put("title","榴莲披萨");
-        values.put("user_id",1);
-        values.put("introduction","榴莲披萨，绝对让你对榴莲的认识上一个新台阶。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",28);
+        values2.put("cover",28);
+        values2.put("title","榴莲披萨");
+        values2.put("user_id",1);
+        values2.put("introduction","榴莲披萨，绝对让你对榴莲的认识上一个新台阶。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",29);
-        values.put("cover",29);
-        values.put("title","牛奶吐司");
-        values.put("user_id",1);
-        values.put("introduction","好吃的牛奶吐司！");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",29);
+        values2.put("cover",29);
+        values2.put("title","牛奶吐司");
+        values2.put("user_id",1);
+        values2.put("introduction","好吃的牛奶吐司！");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",30);
-        values.put("cover",30);
-        values.put("title","巴斯克芝士蛋糕");
-        values.put("user_id",1);
-        values.put("introduction","天气热的时候太需要这样的口感了，细腻顺滑，浓郁醇香，回味无穷！巴斯克芝士蛋糕来源于著名的美食圣地，法国与西班牙交界的一个地区：巴斯克克这款蛋糕独一无二的外表焦黑内里绵密顺滑口感让它成为ins 上的热门，非常浓郁的芝士味、入口即化。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",30);
+        values2.put("cover",30);
+        values2.put("title","巴斯克芝士蛋糕");
+        values2.put("user_id",1);
+        values2.put("introduction","天气热的时候太需要这样的口感了，细腻顺滑，浓郁醇香，回味无穷！巴斯克芝士蛋糕来源于著名的美食圣地，法国与西班牙交界的一个地区：巴斯克克这款蛋糕独一无二的外表焦黑内里绵密顺滑口感让它成为ins 上的热门，非常浓郁的芝士味、入口即化。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",31);
-        values.put("cover",31);
-        values.put("title","法式土豆煎鸡腿肉");
-        values.put("user_id",1);
-        values.put("introduction","简单西餐。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",31);
+        values2.put("cover",31);
+        values2.put("title","法式土豆煎鸡腿肉");
+        values2.put("user_id",1);
+        values2.put("introduction","简单西餐。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",32);
-        values.put("cover",32);
-        values.put("title","Tapas西班牙蒜辣虾");
-        values.put("user_id",1);
-        values.put("introduction","简单好吃。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",32);
+        values2.put("cover",32);
+        values2.put("title","Tapas西班牙蒜辣虾");
+        values2.put("user_id",1);
+        values2.put("introduction","简单好吃。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",33);
-        values.put("cover",33);
-        values.put("title","柠檬香煎三文鱼");
-        values.put("user_id",1);
-        values.put("introduction","爱的料理，不需要复杂的调味，需要新鲜的食材和一颗戴着爱的心。");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",33);
+        values2.put("cover",33);
+        values2.put("title","柠檬香煎三文鱼");
+        values2.put("user_id",1);
+        values2.put("introduction","爱的料理，不需要复杂的调味，需要新鲜的食材和一颗戴着爱的心。");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",34);
-        values.put("cover",34);
-        values.put("title","西式香草烤土豆");
-        values.put("user_id",1);
-        values.put("introduction","不用水煮后再烤，直接烤口感更好，也更方便，水煮过再烤会粉粉的，也比较难烤出金黄的颜色会用到比较多品种的香草，有新鲜的最好啦，没有就用干的吧~如果没有那么多品种，有多少就用多少");
-        db.insert("Menu",null,values);
+        values2.put("menu_id",34);
+        values2.put("cover",34);
+        values2.put("title","西式香草烤土豆");
+        values2.put("user_id",1);
+        values2.put("introduction","不用水煮后再烤，直接烤口感更好，也更方便，水煮过再烤会粉粉的，也比较难烤出金黄的颜色会用到比较多品种的香草，有新鲜的最好啦，没有就用干的吧~如果没有那么多品种，有多少就用多少");
+        db.insert("Menu",null,values2);
 
-        values.put("menu_id",35);
-        values.put("cover",35);
-        values.put("title","cobb salad考伯沙拉");
-        values.put("user_id",1);
-        values.put("introduction","cobb salad: 考伯沙拉，它不是普通的配菜沙拉，是可以做主食来吃的~还可以加任何自己想吃的蔬菜，因为颜色鲜艳营养丰富而广受大家喜爱，推荐使用低卡油醋汁，好吃不怕胖!减脂餐也能吃出新花样!");
-        db.insert("Menu",null,values);
-        db.setTransactionSuccessful(); // 设置事务处理成功，不设置会自动回滚不提交
-        db.endTransaction();
-        db.close();
+        values2.put("menu_id",35);
+        values2.put("cover",35);
+        values2.put("title","cobb salad考伯沙拉");
+        values2.put("user_id",1);
+        values2.put("introduction","cobb salad: 考伯沙拉，它不是普通的配菜沙拉，是可以做主食来吃的~还可以加任何自己想吃的蔬菜，因为颜色鲜艳营养丰富而广受大家喜爱，推荐使用低卡油醋汁，好吃不怕胖!减脂餐也能吃出新花样!");
+        db.insert("Menu",null,values2);
+        //db.setTransactionSuccessful(); // 设置事务处理成功，不设置会自动回滚不提交
+        //db.endTransaction();
+        //db.close();
 
     }
 
