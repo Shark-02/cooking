@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        timer.schedule(task, 1000 * 3); // 3秒后执行
+
     }
 
 
