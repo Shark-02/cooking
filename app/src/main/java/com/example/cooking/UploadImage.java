@@ -1,57 +1,33 @@
 package com.example.cooking;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.widget.Toolbar;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.cooking.ui.Upload.UploadFragment;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
-public class Upload extends AppCompatActivity {
+public class UploadImage extends AppCompatActivity {
 
     ImageView sd;
     ImageView ivImage;
 
-    public static void ToMe(Context context, int type) {
-        Intent intent = new Intent(context, Upload.class);
-        intent.putExtra("type", type);
-        context.startActivity(intent);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload);
+        setContentView(R.layout.activity_upload_image);
         sd = findViewById(R.id.shutdown);
-
-        sd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Upload.this, MainActivity_bottom.class);
-                intent.putExtra("fragment", 3);
-                startActivity(intent);
-                finish();
-
-            }
-        });
         View view = findViewById(R.id.rl_up);
         ivImage = findViewById(R.id.iv_image);
         view.setOnClickListener(new View.OnClickListener() {
@@ -60,13 +36,23 @@ public class Upload extends AppCompatActivity {
                 startActivityForResult(new Intent(Intent.ACTION_GET_CONTENT).setType("image/*"), 100);
             }
         });
+        sd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UploadImage.this, MainActivity_bottom.class);
+                intent.putExtra("fragment", 3);
+                startActivity(intent);
+                finish();
+
+            }
+        });
         //这里是发布
         Button upload = findViewById(R.id.upload_button);
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Upload.this, Release.class);
-                Toast t = Toast.makeText(Upload.this, "发布成功", Toast.LENGTH_SHORT);
+                Intent intent = new Intent(UploadImage.this, Release.class);
+                Toast t = Toast.makeText(UploadImage.this, "发布成功", Toast.LENGTH_SHORT);
                 t.setGravity(Gravity.TOP, 0, 0);
                 t.show();
                 startActivity(intent);
@@ -74,6 +60,9 @@ public class Upload extends AppCompatActivity {
             }
         });
     }
+
+    private String fileName = "";
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

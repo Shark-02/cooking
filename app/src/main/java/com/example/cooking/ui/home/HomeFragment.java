@@ -5,46 +5,37 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Data_view.DataGenerator;
 import com.example.cooking.Data_view.recipe;
-import com.example.cooking.MainActivity_bottom;
-import com.example.cooking.MatchActivity;
+import com.example.cooking.MyFans;
 import com.example.cooking.Menu;
-import com.example.cooking.MyChat;
 import com.example.cooking.MyComment;
 import com.example.cooking.MyDraft;
 import com.example.cooking.MyFinish;
+import com.example.cooking.MyFollow;
 import com.example.cooking.R;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-
-import com.example.cooking.Upload;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;
 import java.util.Random;
 
-public class  HomeFragment extends Fragment /*implements View.OnClickListener*/ {
+public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
 
 
     View root,itemView;
@@ -78,6 +69,8 @@ public class  HomeFragment extends Fragment /*implements View.OnClickListener*/ 
     void SetupView(){
         tb=root.findViewById(R.id.home_tb);
         mDrawerLayout = root.findViewById(R.id.my_drawer);
+        root.findViewById(R.id.myconcern).setOnClickListener(v -> startActivity(new Intent(getActivity(), MyFollow.class)));
+        root.findViewById(R.id.myfans).setOnClickListener(v ->startActivity(new Intent(getActivity(), MyFans.class)));
         iv=root.findViewById(R.id.open_drawer);
         //iv.setOnClickListener(this);
         if (iv!=null){

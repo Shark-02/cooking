@@ -19,26 +19,40 @@ import android.widget.ImageView;
 
 import com.example.cooking.R;
 import com.example.cooking.Upload;
+import com.example.cooking.UploadImage;
+import com.example.cooking.UploadVideo;
 
 public class UploadFragment extends Fragment {
 
     private UploadViewModel mViewModel;
     View vup;
     ImageView re_up;
+
     public static UploadFragment newInstance() {
         return new UploadFragment();
     }
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        vup=inflater.inflate(R.layout.fragment_upload, container, false);
-        re_up=vup.findViewById(R.id.upload_recipe);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        vup = inflater.inflate(R.layout.fragment_upload, container, false);
+        re_up = vup.findViewById(R.id.upload_recipe);
+        vup.findViewById(R.id.upload_video).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              startActivity(new Intent(getActivity(), UploadVideo.class));
+            }
+        });
+        vup.findViewById(R.id.upload_img).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), UploadImage.class));
+            }
+        });
         re_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //getActivity().onBackPressed();//销毁自己，这里不能用finish()
-                Log.d("1","btn is click");
+                Log.d("1", "btn is click");
                 Intent i = new Intent(getActivity(), Upload.class);
                 startActivity(i);
                 getActivity().finish();

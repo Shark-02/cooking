@@ -16,7 +16,7 @@ import io.rong.imlib.RongIMClient;
 
 public class MainActivity extends AppCompatActivity {
 
-    private MyDatabaseHelper dbHelper;
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
         timer.schedule(task, 1000 * 3); // 8秒后执行
-        dbHelper = new MyDatabaseHelper(this,"Cooking.db",null,1);
-        dbHelper.getWritableDatabase();
+        //dbHelper = new MyDatabaseHelper(this,"Cooking.db",null,1);
+        //dbHelper.getWritableDatabase();
         //SQLiteDatabase db= dbHelper.getWritableDatabase();
         //dbHelper.onCreate(db);
         //ContentValues values=new ContentValues();
@@ -71,6 +71,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
 }
