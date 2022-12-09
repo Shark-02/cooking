@@ -3,31 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_main.xml" value="0.1125" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_main_bottom.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_match.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_select_ingredient.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_bean.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_egg.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_fruit.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_fungus.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_main.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_my_chat.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_homepage.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_hot.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_meat.xml" value="0.2526041666666667" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_meatt.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_oil.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_others.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_rice.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_seafood.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_spice.xml" value="0.2" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_vegetable.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_water.xml" value="0.264" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/myhome_drawer.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/view_list_itemlayout.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.136" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/ingredient_menu.xml" value="0.2526041666666667" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/nav_menu_right.xml" value="0.2" />
+        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/nav_home.xml" value="0.2526041666666667" />
       </map>
     </option>
   </component>
@@ -41,7 +20,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.264" />
+        <option name="scale" value="0.10063463281958296" />
       </ProjectState>
     </option>
   </component>

@@ -109,43 +109,15 @@
         app:layout_constraintStart_toStartOf="@id/myfans"
         app:layout_constraintTop_toBottomOf="@id/myfans" />
 
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/switchable"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#B3E8B268"
         app:layout_constraintBottom_toTopOf="@id/myhome_rcv"
         app:layout_constraintTop_toBottomOf="@id/fans_static"
-        android:layout_marginTop="20dp"
-        android:background="#B3EB9620">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="发布"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginVertical="5dp"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="收藏"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginVertical="5dp"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="浏览"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginVertical="5dp"/>
-
-    </LinearLayout>
-
+        app:menu="@menu/nav_home"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myhome_rcv"
