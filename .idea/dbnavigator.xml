@@ -12,20 +12,18 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="caff8f34-c328-4834-b3d9-1849d9dc74a1">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+    <connection id="d3941b9e-1f9b-4b74-9e01-2c4ffb421a59">
+      <console name="Connection 1" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="caff8f34-c328-4834-b3d9-1849d9dc74a1" object-ref="schemas/main/tables/Menu" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="caff8f34-c328-4834-b3d9-1849d9dc74a1" dataset="main.Menu" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="96b2b645-0255-448c-b594-02dbc86a01e9" dataset="main.Picture" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -44,9 +42,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="caff8f34-c328-4834-b3d9-1849d9dc74a1" active="true" signed="true">
+      <connection id="d3941b9e-1f9b-4b74-9e01-2c4ffb421a59" active="true" signed="true">
         <database>
-          <name value="Connection" />
+          <name value="Connection 1" />
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
@@ -59,7 +57,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\27373\AppData\Local\Google\AndroidStudio2021.2\device-explorer\emulator-5554\data\data\com.example.cooking\databases\Cooking.db" schema="main" />
+            <file path="C:\Users\86188\AppData\Local\Google\AndroidStudio2021.3\device-explorer\Pixel_4_API_28 [emulator-5554]\data\data\com.example.cooking\databases\Cooking.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

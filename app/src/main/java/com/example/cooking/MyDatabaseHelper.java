@@ -37,8 +37,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             "user_id integer," +
             "password String," +
             "pic_id integer," +
-            "user_id integer," +
-            "user_id integer)";
+            "fans_id integer," +
+            "concern_id integer)";
     public static final String CREATE_Step = "create table Step(" +
             "id integer primary key autoincrement," +
             "pic_id integer," +
