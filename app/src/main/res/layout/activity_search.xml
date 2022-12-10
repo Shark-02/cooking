@@ -17,7 +17,7 @@
         />
 
     <SearchView
-        android:id="@+id/search_box"
+        android:id="@+id/search_box_ma"
         android:layout_width="240dp"
         android:layout_height="43dp"
         android:background="#F1EFEF"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:text="搜索"
         android:textSize="20sp"
-        app:layout_constraintLeft_toRightOf="@id/search_box"
+        app:layout_constraintLeft_toRightOf="@id/search_box_ma"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="27dp"

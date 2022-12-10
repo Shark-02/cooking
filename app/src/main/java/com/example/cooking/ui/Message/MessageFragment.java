@@ -26,12 +26,15 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 
 import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Adapter.MyMessageAdapter;
+import com.example.cooking.CommentActivity;
 import com.example.cooking.Data_view.Chat_member;
 import com.example.cooking.Data_view.DataGenerator;
 import com.example.cooking.Data_view.recipe;
 import com.example.cooking.MatchActivity;
 import com.example.cooking.Menu;
 import com.example.cooking.MyChat;
+import com.example.cooking.MyCollect;
+import com.example.cooking.MyFansMessage;
 import com.example.cooking.R;
 import com.example.cooking.databinding.FragmentMessageBinding;
 
@@ -115,8 +118,11 @@ public class MessageFragment extends ConversationListFragment {
         MessageViewModel dashboardViewModel =
                 new ViewModelProvider(this).get(MessageViewModel.class);
 
-        root = inflater.inflate(R.layout.fragment_message, container, false);
-
+        binding = FragmentMessageBinding.inflate(inflater, container, false);
+        root = binding.getRoot();
+        binding.fansIcon.setOnClickListener(v -> startActivity(new Intent(getActivity(), MyFansMessage.class)));
+        binding.collectionIcon.setOnClickListener(v -> startActivity(new Intent(getActivity(), MyCollect.class)));
+        binding.commentIcon.setOnClickListener(v -> startActivity(new Intent(getActivity(), CommentActivity.class)));
         //SetupView();
 
         return root;

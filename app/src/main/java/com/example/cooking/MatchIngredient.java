@@ -61,7 +61,7 @@ public class MatchIngredient extends AppCompatActivity {
         lv=findViewById(R.id.search_rcv);
         iv=findViewById(R.id.imageView2);
         sv=findViewById(R.id.search_box);
-        sv.setQueryHint("请输入您要查找的食材");
+        sv.setQueryHint("请输入食材");
     }
 
     void Listen(){

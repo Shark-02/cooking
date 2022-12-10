@@ -21,6 +21,7 @@ public class MyAdapter extends BaseQuickAdapter<recipe, BaseViewHolder> {
     protected void convert(@NonNull BaseViewHolder helper, recipe recipe) {
         helper.setText(R.id.item_title,recipe.title);
         helper.setText(R.id.item_content,recipe.content);
-        helper.setImageResource(R.id.item_img,recipe.img_id);
+        //helper.setImageResource(R.id.item_img,recipe.img_id);
+        helper.setImageBitmap(R.id.item_img,recipe.img);
     }
 }
