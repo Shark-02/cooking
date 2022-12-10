@@ -32,10 +32,10 @@
 
         <ImageView
             android:id="@+id/add_ingre"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_toRightOf="@id/igName01"
-            android:layout_marginLeft="100dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/picture01"
+            android:layout_marginLeft="170dp"
             android:src="@drawable/add"
             android:layout_centerVertical="true"
             />

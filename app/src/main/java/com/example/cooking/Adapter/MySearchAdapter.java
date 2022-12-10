@@ -20,7 +20,9 @@ public class MySearchAdapter extends BaseQuickAdapter<Search_recipe, BaseViewHol
 
     @Override
     protected void convert(@NonNull BaseViewHolder helper, Search_recipe sr) {
-        helper.setImageResource(R.id.picture01, sr.img_id);
+        //helper.setImageResource(R.id.picture01, sr.img_id);
+        helper.setImageBitmap(R.id.picture01,sr.img);
+        //helper.setImageDrawable();
         helper.setText(R.id.igName01,sr.ingre_title);
         helper.setImageResource(R.id.add_ingre,sr.add_id);
     }

@@ -54,7 +54,7 @@ public class DataGenerator {
         List<Search_recipe> ret = new ArrayList<>();
         for (int i = 0; i < ingre_names.length; ++i) {
             Search_recipe cms = new Search_recipe();
-            cms.img_id = ingre_imgs[i];
+            //cms.img_id = ingre_imgs[i];
             cms.ingre_title = ingre_names[i];
             cms.add_id =R.drawable.add;
             ret.add(cms);
