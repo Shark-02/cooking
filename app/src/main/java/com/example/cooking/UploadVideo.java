@@ -44,9 +44,9 @@ public class UploadVideo extends AppCompatActivity {
         sd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UploadVideo.this, MainActivity_bottom.class);
-                intent.putExtra("fragment", 3);
-                startActivity(intent);
+                //Intent intent = new Intent(UploadVideo.this, MainActivity_bottom.class);
+                //intent.putExtra("fragment", 3);
+                //startActivity(intent);
                 finish();
 
             }

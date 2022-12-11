@@ -17,9 +17,10 @@ public class Release extends AppCompatActivity {
         release_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Release.this, MainActivity_bottom.class);
-                intent.putExtra("fragment",3);
-                startActivity(intent);
+                //Intent intent = new Intent(Release.this, MainActivity_bottom.class);
+                //intent.putExtra("fragment",3);
+                //startActivity(intent);
+                finish();
 
             }
         });

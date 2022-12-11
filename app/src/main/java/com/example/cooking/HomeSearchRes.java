@@ -15,6 +15,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -42,6 +44,8 @@ public class HomeSearchRes extends AppCompatActivity {
     String Search_ct;
     String[] strings;
     ImageView back;
+    SearchView sv2;
+    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +53,10 @@ public class HomeSearchRes extends AppCompatActivity {
         data=new ArrayList<>();
         Intent intent=getIntent();
         Search_ct=intent.getStringExtra("search_ct");
+        init();
         SetupAdapter();
-        back=findViewById(R.id.match_back_2);
+        search_res();
+        tv.setText(Search_ct);
         back.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -58,6 +64,12 @@ public class HomeSearchRes extends AppCompatActivity {
             }
 
         });
+    }
+
+    void init(){
+        back=findViewById(R.id.match_back_2);
+        sv2=findViewById(R.id.search_box3);
+        tv=findViewById(R.id.query_hint);
     }
 
     void SetupAdapter(){
@@ -165,5 +177,50 @@ public class HomeSearchRes extends AppCompatActivity {
 
         }
         return listTemp;
+    }
+
+    void search_res(){
+        sv2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setVisibility(View.INVISIBLE);
+            }
+        });
+        sv2.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setVisibility(View.INVISIBLE);
+            }
+        });
+        sv2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                data=getData(query);
+                ma=new MyAdapter(R.layout.view_list_itemlayout,data);
+                rcv=findViewById(R.id.search_res_home);
+                StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+                rcv.setLayoutManager(sm);
+                rcv.setAdapter(ma);
+                //item点击事件
+                ma.setOnItemClickListener(new OnItemClickListener() {
+                    @Override
+                    public void onItemClick(@NonNull BaseQuickAdapter adapter, @NonNull View view, int position) {
+                        //itemView=sm.getChildAt(position);
+                        //itemimg=itemView.findViewById(R.id.item_img);
+                        //Bitmap bitmap = ((BitmapDrawable)itemimg.getDrawable()).getBitmap();
+                        Intent intent = new Intent(HomeSearchRes.this, Menu.class);
+                        //intent.putExtra("itemimg",bitmap);
+                        startActivity(intent);
+                    }
+                });
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
     }
 }

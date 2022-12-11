@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="16dp"
-                android:text="上传视频"
+                android:text="上传菜谱"
                 android:textColor="@color/black"
                 android:textSize="@dimen/font_bar_title" />
 

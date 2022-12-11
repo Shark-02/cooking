@@ -55,7 +55,7 @@ public class UploadFragment extends Fragment {
                 Log.d("1", "btn is click");
                 Intent i = new Intent(getActivity(), Upload.class);
                 startActivity(i);
-                getActivity().finish();
+                //getActivity().finish();
             }
         });
         return vup;

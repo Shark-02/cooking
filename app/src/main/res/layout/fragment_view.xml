@@ -39,12 +39,21 @@
        app:layout_constraintStart_toStartOf="@+id/search_box2_view"
        app:layout_constraintTop_toTopOf="@+id/search_box2_view" />
 
-   <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/view_lv"
-       android:layout_width="match_parent"
-       android:layout_height="0dp"
-       app:layout_constraintTop_toBottomOf="@id/search_box2_view"
-       app:layout_constraintBottom_toBottomOf="parent"
-       />
+   <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+       android:id="@+id/myfresh"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/search_box2_view">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/view_lv"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          app:layout_constraintTop_toBottomOf="@id/search_box2_view"
+          app:layout_constraintBottom_toBottomOf="parent"
+          />
+   </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

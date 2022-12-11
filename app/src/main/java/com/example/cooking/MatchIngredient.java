@@ -1,5 +1,6 @@
 package com.example.cooking;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.cooking.Adapter.MySearchAdapter;
 import com.example.cooking.Data_view.DataGenerator;
 import com.example.cooking.Data_view.Search_recipe;
@@ -35,6 +38,7 @@ public class MatchIngredient extends AppCompatActivity {
     ImageView iv;
     SearchView sv;
     Cursor cursor;
+    ArrayList beclick;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,6 +136,15 @@ public class MatchIngredient extends AppCompatActivity {
                 LinearLayoutManager layoutManager = new LinearLayoutManager(lv.getContext());
                 lv.setLayoutManager(layoutManager);
                 lv.setAdapter(ma);
+                beclick=new ArrayList<>();
+                ma.setOnItemClickListener(new OnItemClickListener() {
+                    @Override
+                    public void onItemClick(@NonNull BaseQuickAdapter adapter, @NonNull View view, int position) {
+                        beclick.add(data.get(position).ingre_title);
+                        Log.d("title",data.get(position).ingre_title);
+                        Log.d("size",String.valueOf(beclick.size()));
+                    }
+                });
 
 
                 //清除焦点，收软键盘
@@ -161,6 +174,9 @@ public class MatchIngredient extends AppCompatActivity {
                 return bitmap;
 
             }
+
+
+
         });
 
 

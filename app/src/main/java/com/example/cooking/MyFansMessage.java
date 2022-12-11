@@ -23,10 +23,10 @@ public class MyFansMessage extends AppCompatActivity {
         RecyclerView rvComment = findViewById(R.id.rv_fans);
         findViewById(R.id.iv_back).setOnClickListener(v -> finish());
         TextView tvTitle = findViewById(R.id.tv_title);
-        tvTitle.setText("评论");
+        tvTitle.setText("粉丝");
         List<My_Fans_Message> my_fans_messages = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            my_fans_messages.add(new My_Fans_Message("comment_name"+i,R.drawable.xs,"xxxx"));
+            my_fans_messages.add(new My_Fans_Message("fans_name"+i,R.drawable.xs,"xxxx"));
         }
         rvComment.setAdapter(new MyFansMessageAdapter(my_fans_messages));
     }
