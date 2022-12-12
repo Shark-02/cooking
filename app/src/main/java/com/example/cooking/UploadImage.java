@@ -1,6 +1,8 @@
 package com.example.cooking;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -11,12 +13,16 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UploadImage extends AppCompatActivity {
 
@@ -33,7 +39,8 @@ public class UploadImage extends AppCompatActivity {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(Intent.ACTION_GET_CONTENT).setType("image/*"), 100);
+                startActivityForResult(new Intent(Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI), 100);
             }
         });
         sd.setOnClickListener(new View.OnClickListener() {
@@ -83,4 +90,6 @@ public class UploadImage extends AppCompatActivity {
             }
         }
     }
+
+
 }

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import io.rong.imkit.activity.RongBaseActivity;
 import io.rong.imkit.conversation.ConversationFragment;
 import io.rong.imkit.conversation.RongConversationActivity;
 import io.rong.imkit.userinfo.RongUserInfoManager;
+import io.rong.imkit.userinfo.model.GroupUserInfo;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.Group;
@@ -24,12 +26,18 @@ import io.rong.imlib.model.UserInfo;
 public class MyChat extends FragmentActivity {
 
     ImageView iv;
+    TextView tv;
     protected String mTargetId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_chat);
+        tv=findViewById(R.id.friend_id);
         this.mTargetId = this.getIntent().getStringExtra("targetId");
+        UserInfo userInfo = RongUserInfoManager.getInstance().getUserInfo(this.mTargetId);
+        tv.setText(userInfo == null ? this.mTargetId : userInfo.getName());
         ConversationFragment conversationFragment = new ConversationFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();

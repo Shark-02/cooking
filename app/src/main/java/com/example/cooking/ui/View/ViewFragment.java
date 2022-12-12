@@ -63,6 +63,15 @@ public class ViewFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_view, container, false);
         //setupView();
+        search_box2=view.findViewById(R.id.search_box2_view);
+        search_box2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
+            }
+
+        });
         refreshrcv(10);
         setupfresh();
         return view;
@@ -91,20 +100,13 @@ public class ViewFragment extends Fragment {
         //data=DataGenerator.addRecipe(data,num);
         ma=new MyAdapter(R.layout.view_list_itemlayout,data);
         lv=view.findViewById(R.id.view_lv);
-        search_box2=view.findViewById(R.id.search_box2_view);
+
         //LinearLayoutManager layoutManager = new LinearLayoutManager(lv.getContext());
         StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         //lv.setLayoutManager(layoutManager);
         lv.setLayoutManager(sm);
         lv.setAdapter(ma);
-        search_box2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SearchActivity.class);
-                startActivity(intent);
-            }
 
-        });
         //item的点击事件
         ma.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -161,7 +163,7 @@ public class ViewFragment extends Fragment {
                 //Bitmap bitmap = ((BitmapDrawable)itemimg.getDrawable()).getBitmap();
                 //Log.d("po",String.valueOf(position));
                 Intent intent = new Intent(getContext(), Menu.class);
-                //intent.putExtra("itemimg",bitmap);
+                intent.putExtra("title",data.get(position).title);
                 startActivity(intent);
             }
         });

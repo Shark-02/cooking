@@ -66,6 +66,7 @@ public class MatchIngredient extends AppCompatActivity {
         iv=findViewById(R.id.imageView2);
         sv=findViewById(R.id.search_box);
         sv.setQueryHint("请输入食材");
+        beclick=new ArrayList<>();
     }
 
     void Listen(){
@@ -73,6 +74,7 @@ public class MatchIngredient extends AppCompatActivity {
         iv.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Log.d("size",String.valueOf(beclick.size()));
                 finish();
             }
 
@@ -126,25 +128,27 @@ public class MatchIngredient extends AppCompatActivity {
                     data.add(rs);
                 }
 
-                if(data.size()>0){
+                /*if(data.size()>0){
                     Log.d("1",String.valueOf(data.size()));
                 }
                 else{
                     Log.d("1","null");
-                }
+                }*/
                 ma=new MySearchAdapter(R.layout.search_result_item,data);
                 LinearLayoutManager layoutManager = new LinearLayoutManager(lv.getContext());
                 lv.setLayoutManager(layoutManager);
                 lv.setAdapter(ma);
-                beclick=new ArrayList<>();
+
                 ma.setOnItemClickListener(new OnItemClickListener() {
                     @Override
                     public void onItemClick(@NonNull BaseQuickAdapter adapter, @NonNull View view, int position) {
                         beclick.add(data.get(position).ingre_title);
+                        Toast.makeText(MatchIngredient.this, "您选择了"+data.get(position).ingre_title, Toast.LENGTH_SHORT).show();
                         Log.d("title",data.get(position).ingre_title);
-                        Log.d("size",String.valueOf(beclick.size()));
+                        //Log.d("size",String.valueOf(beclick.size()));
                     }
                 });
+                //Log.d("size",String.valueOf(beclick.size()));
 
 
                 //清除焦点，收软键盘

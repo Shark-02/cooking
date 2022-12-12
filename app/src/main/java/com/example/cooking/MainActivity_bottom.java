@@ -1,6 +1,8 @@
 package com.example.cooking;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -8,6 +10,8 @@ import android.widget.ImageView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
 import androidx.navigation.NavInflater;
@@ -17,6 +21,9 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.cooking.databinding.ActivityMainBottomBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity_bottom extends AppCompatActivity {
 
@@ -28,7 +35,7 @@ public class MainActivity_bottom extends AppCompatActivity {
 
         binding = ActivityMainBottomBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        requestPermission();
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -52,6 +59,21 @@ public class MainActivity_bottom extends AppCompatActivity {
         navController.setGraph(navGraph);
         NavigationUI.setupWithNavController(binding.navView, navController);
         ImageView select_ingredient=findViewById(R.id.choose_ingredient);
+
+    }
+
+    private void requestPermission() {
+        List<String> permission = new ArrayList<>();
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED) {
+            permission.add(android.Manifest.permission.CAMERA);
+        }
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+            permission.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        }
+
+        if (!permission.isEmpty()) {
+            ActivityCompat.requestPermissions(this, permission.toArray(new String[0]), 100);
+        }
 
     }
 

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".Menu">
 
     <LinearLayout
@@ -30,23 +32,25 @@
         app:layout_constraintHorizontal_bias="0.05"
         />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mynsv"
         android:layout_width="match_parent"
-        android:layout_height="670dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/menu_bg"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
+        android:fillViewport="true"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp">
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
-                android:layout_height="415dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="806dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +107,7 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="12dp"
@@ -123,7 +127,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="90dp"
-                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="@+id/textView5"
                 app:srcCompat="@drawable/cook" />
 
@@ -133,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="135dp"
                 android:layout_marginEnd="50dp"
-                android:text="汉姆叔叔"
+                android:text="官方教程"
                 android:textColor="@color/gray_2"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -155,7 +159,7 @@
                 app:layout_constraintTop_toTopOf="@+id/Tom_text" />
 
             <TextView
-                android:id="@+id/yongliang_text"
+                android:id="@+id/yongliao_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -168,175 +172,67 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-            <TextView
-                android:id="@+id/niurouxian_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="牛肉馅"
-                android:textSize="15dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/yongliang_text"
-                android:layout_marginTop="40dp"
-                android:layout_marginStart="30dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/yongliao_rcv"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="60dp"
+                app:layout_constraintTop_toBottomOf="@+id/yongliao_text"
+                android:scrollbarSize="5dp"
+                android:scrollbars="horizontal"
+                tools:listitem="@layout/yongliao_item"
+                />
 
             <TextView
-                android:id="@+id/diandian_text"
+                android:id="@+id/buzhou_text"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text=".................................................................."
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/niurouxian_text" />
-
-            <TextView
-                android:id="@+id/g_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="500克"
-                android:textSize="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/niurouxian_text"
-                android:layout_marginEnd="30dp"/>
-
-            <TextView
-                android:id="@+id/bange_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="半个"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="@+id/g_text"
-                app:layout_constraintStart_toStartOf="@id/g_text"
-                app:layout_constraintTop_toBottomOf="@id/g_text"
-                android:layout_marginTop="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text=".................................................................."
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/onion_text" />
-
-            <TextView
-                android:id="@+id/onion_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="洋葱"
-                android:textSize="15dp"
-                app:layout_constraintStart_toStartOf="@+id/niurouxian_text"
-                app:layout_constraintTop_toBottomOf="@id/niurouxian_text"
-                android:layout_marginTop="20dp"/>
-
-            <TextView
-                android:id="@+id/bread_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="汉堡面包"
-                android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="@+id/onion_text"
-                app:layout_constraintTop_toBottomOf="@id/onion_text"
-                android:layout_marginTop="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text=".................................................................."
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/bread_text" />
-
-            <TextView
-                android:id="@+id/jy_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="酱油、黑胡椒"
-                android:textSize="15dp"
-                app:layout_constraintStart_toStartOf="@+id/bread_text"
-                app:layout_constraintTop_toBottomOf="@id/bread_text"
-                android:layout_marginTop="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text=".................................................................."
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/jy_text" />
-
-            <TextView
-                android:id="@+id/jiang_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="蛋黄酱、黄芥末、番茄酱"
-                android:textSize="15dp"
-                app:layout_constraintStart_toStartOf="@+id/jy_text"
-                app:layout_constraintTop_toBottomOf="@id/jy_text"
-                android:layout_marginTop="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text=".................................................................."
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/jiang_text" />
-
-            <TextView
-                android:id="@+id/cheese_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="芝士片"
-                android:textSize="15dp"
-                app:layout_constraintStart_toStartOf="@+id/jiang_text"
-                app:layout_constraintTop_toBottomOf="@id/jiang_text"
-                android:layout_marginTop="20dp" />
-
-
-            <TextView
-                android:id="@+id/step_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="165dp"
-                android:text="步骤1"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/yongliang_text"
-                app:layout_constraintTop_toBottomOf="@+id/cheese_text"
-                android:layout_marginTop="40dp"/>
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="0dp"
-                android:layout_height="110dp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/step_1"
-                app:srcCompat="@drawable/ic_launcher_background" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="30dp"
-                android:text="        肥瘦比例约2：8的牛肉馅，拌入大量黑胡椒粗末、少量酱油，搅匀，或用手抓匀上劲。"
+                android:layout_marginEnd="33dp"
+                android:text="步骤"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/yongliao_rcv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/buzhou_rcv"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="0dp"
+                android:scrollbarSize="5dp"
+                android:scrollbars="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/buzhou_text"
+                tools:listitem="@layout/buzhou_item"
+                />
+
+            <Button
+                android:id="@+id/mydone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已做过"
+                app:layout_constraintTop_toBottomOf="@+id/buzhou_rcv"
+                android:layout_marginStart="50dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <Button
+                android:id="@+id/mycollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏"
+                app:layout_constraintTop_toBottomOf="@+id/buzhou_rcv"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

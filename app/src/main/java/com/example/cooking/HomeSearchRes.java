@@ -104,6 +104,7 @@ public class HomeSearchRes extends AppCompatActivity {
                 //itemimg=itemView.findViewById(R.id.item_img);
                 //Bitmap bitmap = ((BitmapDrawable)itemimg.getDrawable()).getBitmap();
                 Intent intent = new Intent(HomeSearchRes.this, Menu.class);
+                intent.putExtra("title",data.get(position).title);
                 //intent.putExtra("itemimg",bitmap);
                 startActivity(intent);
             }
@@ -210,7 +211,7 @@ public class HomeSearchRes extends AppCompatActivity {
                         //itemimg=itemView.findViewById(R.id.item_img);
                         //Bitmap bitmap = ((BitmapDrawable)itemimg.getDrawable()).getBitmap();
                         Intent intent = new Intent(HomeSearchRes.this, Menu.class);
-                        //intent.putExtra("itemimg",bitmap);
+                        intent.putExtra("title",data.get(position).title);
                         startActivity(intent);
                     }
                 });
