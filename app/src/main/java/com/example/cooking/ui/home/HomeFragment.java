@@ -5,6 +5,7 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Data_view.DataGenerator;
 import com.example.cooking.Data_view.recipe;
+import com.example.cooking.MatchActivity;
 import com.example.cooking.MyDatabaseHelper;
 import com.example.cooking.MyFans;
 import com.example.cooking.Menu;
@@ -201,24 +202,28 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         favorite_data= new ArrayList<>();
         MyDatabaseHelper dbHelper = new MyDatabaseHelper(getActivity(),"Cooking.db",null,1);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        Cursor cursor=db.rawQuery("select title,introduction from Menu where user_id=2",null);
-        Cursor cursor1 = db.rawQuery("select title,pic from Menu,Picture where Picture.id=cover and user_id=2" ,null);
+        Cursor cursor=db.rawQuery("select title,introduction,pic from Menu,Picture where Picture.id=cover and user_id=2 order by Picture.id desc",null);
+        //Cursor cursor1 = db.rawQuery("select title,pic from Menu,Picture where Picture.id=cover and user_id=2" ,null);
 
         //这里还要加”我的收藏“的查询语句
         /*int menuid=0;
         Cursor cursor2=db.rawQuery("select menu_id from Collection where user_id=2", null);*/
 
-        if(cursor.moveToFirst() & cursor1.moveToFirst()){
+        if(cursor.moveToFirst()){
             do{
                 recipe rs = new recipe();
-                rs.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
-                Log.d("pic",cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+                String img=cursor.getString(cursor.getColumnIndexOrThrow("pic"));
+                BitmapFactory.Options opt = new BitmapFactory.Options();
+                opt.inPreferredConfig = Bitmap.Config.RGB_565;
+                Bitmap bitmap = BitmapFactory.decodeFile(img, opt);
+                rs.img=bitmap;
+                Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
                 rs.title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
                 Log.d("title",cursor.getString(cursor.getColumnIndexOrThrow("title")));
                 rs.content = cursor.getString(cursor.getColumnIndexOrThrow("introduction"));
                 Log.d("introduction",cursor.getString(cursor.getColumnIndexOrThrow("introduction")));
                 published_data.add(rs);
-            }while (cursor.moveToNext() & cursor1.moveToNext());
+            }while (cursor.moveToNext() & cursor.moveToNext());
         }
         /*if (cursor2.moveToFirst())
         {menuid=cursor2.getInt(cursor2.getColumnIndexOrThrow("menu_id"));}
@@ -234,7 +239,7 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
             favorite_data.add(rs);
         }*/
         cursor.close();
-        cursor1.close();
+        //cursor1.close();
         //cursor2.close();
         //cursor3.close();
 

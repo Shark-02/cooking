@@ -86,6 +86,7 @@ public class Fragment_myFavorite extends Fragment {
     void SetupAdapter(){
 
         ma2=new MyAdapter(R.layout.view_list_itemlayout,getData());
+        Log.d("133",String.valueOf(getData().size()));
         rcv=root.findViewById(R.id.favorite_content);
         StaggeredGridLayoutManager sm2=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         rcv.setLayoutManager(sm2);

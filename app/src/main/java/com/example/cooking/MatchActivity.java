@@ -128,6 +128,7 @@ public class MatchActivity extends AppCompatActivity {
             @Override
             public void onItemClick(@NonNull BaseQuickAdapter adapter, @NonNull View view, int position) {
                 Intent intent = new Intent(MatchActivity.this, Menu.class);
+                intent.putExtra("title",data.get(position).menu_title);
                 startActivity(intent);
             }
         });
