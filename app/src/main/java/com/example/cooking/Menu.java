@@ -210,12 +210,18 @@ public class Menu extends AppCompatActivity {
                 cursor3 = db.rawQuery("select menu_id from Menu where  Menu.title like '%" + title + "%'", null);
                 if (cursor3.moveToFirst())
                 {menuid=cursor3.getInt(cursor3.getColumnIndexOrThrow("menu_id"));}
-                ContentValues cv = new ContentValues();
-                cv.put("user_id", 0221);
-                cv.put("menu_id", menuid);
-                //插入ContentValues中的数据
-                db.insert("Collection", null, cv);
-                Toast.makeText(Menu.this, "收藏成功！", Toast.LENGTH_SHORT).show();
+                Cursor cursor6 = db.rawQuery("select menu_id from Finish  where menu_id="+ menuid, null);
+                if(!cursor6.moveToFirst()) {
+                    ContentValues cv = new ContentValues();
+                    cv.put("user_id", 0221);
+                    cv.put("menu_id", menuid);
+                    //插入ContentValues中的数据
+                    db.insert("Collection", null, cv);
+                    Toast.makeText(Menu.this, "收藏成功！", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(Menu.this, "您已收藏该菜谱！", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
