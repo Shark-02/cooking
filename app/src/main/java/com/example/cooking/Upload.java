@@ -3,8 +3,11 @@ package com.example.cooking;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -41,6 +44,7 @@ public class Upload extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
         sd = findViewById(R.id.shutdown);
+        MyDatabaseHelper myopenHelper = new MyDatabaseHelper(this,"Cooking.db",null,1);
 
         sd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +69,24 @@ public class Upload extends AppCompatActivity {
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //获取edittext数据填入数据库
+                SQLiteDatabase db = myopenHelper.getReadableDatabase();
+                ContentValues values=new ContentValues();
+                EditText title=(EditText) findViewById(R.id.recipe_name);
+                EditText content=(EditText)findViewById(R.id.recipe_content);
+                EditText ingre=(EditText)findViewById(R.id.ingre_input);
+                EditText step=(EditText)findViewById(R.id.step_input);
+                String menuTitle=title.getText().toString();
+                String menuContent=content.getText().toString();
+                String menuIngre=ingre.getText().toString();
+                String menuStep=step.getText().toString();
+                values.put("cover",1);
+                values.put("title",menuTitle);
+                values.put("user_id",2);
+                values.put("introduction",menuContent);
+                db.insert("Menu",null,values);
+
+
                 Intent intent = new Intent(Upload.this, Release.class);
                 Toast t = Toast.makeText(Upload.this, "发布成功", Toast.LENGTH_SHORT);
                 t.setGravity(Gravity.TOP, 0, 0);
@@ -74,6 +96,8 @@ public class Upload extends AppCompatActivity {
             }
         });
     }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

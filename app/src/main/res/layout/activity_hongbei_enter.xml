@@ -19,7 +19,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="家常菜"
+        android:text="烘焙"
         android:textSize="20dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.04" />
 
     <ImageView
-        android:id="@+id/home_cooking_back"
+        android:id="@+id/hongbei_back"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:src="@drawable/back"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView5" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/home_cooking_content"
+        android:id="@+id/hongbei_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"

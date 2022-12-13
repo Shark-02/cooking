@@ -5,6 +5,7 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Data_view.DataGenerator;
 import com.example.cooking.Data_view.recipe;
+import com.example.cooking.MyDatabaseHelper;
 import com.example.cooking.MyFans;
 import com.example.cooking.Menu;
 import com.example.cooking.MyComment;
@@ -14,6 +15,10 @@ import com.example.cooking.MyFollow;
 import com.example.cooking.R;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,11 +32,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.annotation.NonNull;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -46,6 +56,9 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
     List<recipe> data;
     MyAdapter ma;
     RecyclerView rcv;
+    List<recipe> published_data;
+    List<recipe> favorite_data;
+    MyDatabaseHelper dbHelper;
 
 
 
@@ -57,7 +70,6 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         root = inflater.inflate(R.layout.myhome_drawer, container, false);
 
         SetupView();
-        SetupAdapter();
         return root;
     }
 
@@ -119,12 +131,24 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
 
     }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        BottomNavigationView bottomNavigationView = root.findViewById(R.id.switchable);
+        NavController navController = Navigation.findNavController(getActivity(), R.id.myhome_fra);
+        //AppBarConfiguration configuration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+        //NavigationUI.setupActionBarWithNavController(this,navController,configuration);
+        NavigationUI.setupWithNavController(bottomNavigationView, navController);
+        SetupAdapter();
+    }
+
     /*@Override
     public void onClick(View arg0) {
         Log.d("1","btn is click");
         mDrawerLayout.openDrawer(GravityCompat.START);
     }*/
-    void SetupAdapter(){
+    /*void SetupAdapter(){
         data= DataGenerator.genRecipeData();
         int num= new Random().nextInt(20);
         for (int i=0;i<num;i++){
@@ -139,7 +163,7 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         rcv.setLayoutManager(sm);
         rcv.setAdapter(ma);
-        //item点击事件
+        item点击事件
         ma.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(@NonNull BaseQuickAdapter adapter, @NonNull View view, int position) {
@@ -151,6 +175,66 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
                 startActivity(intent);
             }
         });
+    }*/
+
+    void SetupAdapter(){
+        published_data= new ArrayList<>();
+        favorite_data= new ArrayList<>();
+        MyDatabaseHelper dbHelper = new MyDatabaseHelper(getActivity(),"Cooking.db",null,1);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        Cursor cursor=db.rawQuery("select title,introduction from Menu where user_id=2",null);
+        Cursor cursor1 = db.rawQuery("select title,pic from Menu,Picture where Picture.id=cover and user_id=2" ,null);
+
+        //这里还要加”我的收藏“的查询语句
+        /*int menuid=0;
+        Cursor cursor2=db.rawQuery("select menu_id from Collection where user_id=2", null);*/
+
+        if(cursor.moveToFirst() & cursor1.moveToFirst()){
+            do{
+                recipe rs = new recipe();
+                rs.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+                Log.d("pic",cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+                rs.title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
+                Log.d("title",cursor.getString(cursor.getColumnIndexOrThrow("title")));
+                rs.content = cursor.getString(cursor.getColumnIndexOrThrow("introduction"));
+                Log.d("introduction",cursor.getString(cursor.getColumnIndexOrThrow("introduction")));
+                published_data.add(rs);
+            }while (cursor.moveToNext() & cursor1.moveToNext());
+        }
+        /*if (cursor2.moveToFirst())
+        {menuid=cursor2.getInt(cursor2.getColumnIndexOrThrow("menu_id"));}
+        Cursor cursor3 = db.rawQuery("select title,introduction,pic from Menu,Menu,Picture where Picture.id=cover and menu_id= " + menuid, null);
+        if (cursor3.moveToFirst()) {
+            recipe rs = new recipe();
+            rs.img=getImageBitmap(cursor3.getString(cursor3.getColumnIndexOrThrow("pic")));
+            Log.d("pic",cursor3.getString(cursor3.getColumnIndexOrThrow("pic")));
+            rs.title = cursor3.getString(cursor3.getColumnIndexOrThrow("title"));
+            Log.d("title",cursor3.getString(cursor3.getColumnIndexOrThrow("title")));
+            rs.content = cursor3.getString(cursor3.getColumnIndexOrThrow("introduction"));
+            Log.d("introduction",cursor3.getString(cursor3.getColumnIndexOrThrow("introduction")));
+            favorite_data.add(rs);
+        }*/
+        cursor.close();
+        cursor1.close();
+        //cursor2.close();
+        //cursor3.close();
+
+        ma=new MyAdapter(R.layout.view_list_itemlayout,published_data);
+        rcv=root.findViewById(R.id.published_content);
+        StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        rcv.setLayoutManager(sm);
+        rcv.setAdapter(ma);
+
     }
 
+    public Bitmap getImageBitmap(String imgName){
+        String DIR = "/data/data/com.example.cooking/img/";
+        String img= DIR+imgName;
+        BitmapFactory.Options opt = new BitmapFactory.Options();
+        opt.inPreferredConfig = Bitmap.Config.RGB_565;
+        Bitmap bitmap = BitmapFactory.decodeFile(img, opt);
+        return bitmap;
+
+    }
 }
+

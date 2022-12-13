@@ -41,6 +41,7 @@ public class SelectIngredient extends AppCompatActivity {
         setContentView(R.layout.activity_select_ingredient);
         ImageView select_ingredient_back=findViewById(R.id.back_icon);
         Button select_finish=findViewById(R.id.select_finish);
+        ImageView basket=findViewById(R.id.basket01);
         sr_ic=findViewById(R.id.search_icon);
         //这里是Back
         select_ingredient_back.setOnClickListener(new View.OnClickListener(){
@@ -49,6 +50,14 @@ public class SelectIngredient extends AppCompatActivity {
                 finish();
             }
 
+        });
+        //这里是购物车
+        basket.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(SelectIngredient.this,Ingredient_basket.class);
+                startActivity(intent);
+            }
         });
         //这里是选好了
         select_finish.setOnClickListener(new View.OnClickListener() {

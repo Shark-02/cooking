@@ -22,9 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class jiachang_enter extends AppCompatActivity {
+public class gengduo_enter extends AppCompatActivity {
 
-    List<recipe> jiachang_data;
+    List<recipe> gengduo_data;
     MyAdapter ma;
     RecyclerView rcv;
     MyDatabaseHelper dbHelper;
@@ -32,10 +32,10 @@ public class jiachang_enter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jiachang_enter);
+        setContentView(R.layout.activity_gengduo_enter);
 
         //这里是Back
-        ImageView home_cooking_back=findViewById(R.id.home_cooking_back);
+        ImageView home_cooking_back=findViewById(R.id.gengduo_back);
         home_cooking_back.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -47,11 +47,11 @@ public class jiachang_enter extends AppCompatActivity {
     }
 
     void SetupAdapter(){
-        jiachang_data= new ArrayList<>();
+        gengduo_data= new ArrayList<>();
         MyDatabaseHelper dbHelper = new MyDatabaseHelper(this,"Cooking.db",null,1);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        Cursor cursor=db.query("Menu",null,null,null,"menu_id","menu_id<6",null);
-        Cursor cursor1 = db.rawQuery("select id,pic from Menu,Picture where Picture.id=cover" , null);
+        Cursor cursor=db.query("Menu",null,null,null,"menu_id",null,null);
+        Cursor cursor1 = db.rawQuery("select title,pic from Menu,Picture where Picture.id=cover" ,null);
         if(cursor.moveToFirst() & cursor1.moveToFirst()){
             do{
                 recipe rs = new recipe();
@@ -61,13 +61,13 @@ public class jiachang_enter extends AppCompatActivity {
                 Log.d("title",cursor.getString(cursor.getColumnIndexOrThrow("title")));
                 rs.content = cursor.getString(cursor.getColumnIndexOrThrow("introduction"));
                 Log.d("introduction",cursor.getString(cursor.getColumnIndexOrThrow("introduction")));
-                jiachang_data.add(rs);
+                gengduo_data.add(rs);
             }while (cursor.moveToNext() & cursor1.moveToNext());
         }
         cursor.close();
         cursor1.close();
-        ma=new MyAdapter(R.layout.view_list_itemlayout,jiachang_data);
-        rcv=findViewById(R.id.home_cooking_content);
+        ma=new MyAdapter(R.layout.view_list_itemlayout,gengduo_data);
+        rcv=findViewById(R.id.gengduo_content);
         StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         rcv.setLayoutManager(sm);
         rcv.setAdapter(ma);

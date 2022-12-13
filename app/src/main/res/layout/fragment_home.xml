@@ -115,18 +115,23 @@
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:background="#B3E8B268"
-        app:layout_constraintBottom_toTopOf="@id/myhome_rcv"
+        app:layout_constraintBottom_toTopOf="@id/myhome_fra"
         app:layout_constraintTop_toBottomOf="@id/fans_static"
         app:menu="@menu/nav_home"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/myhome_rcv"
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/myhome_fra"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
         android:background="@color/white"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switchable" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchable"
+        app:navGraph="@navigation/navigtion_myhome" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
