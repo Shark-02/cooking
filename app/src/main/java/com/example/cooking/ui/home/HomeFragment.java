@@ -247,6 +247,11 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
 
         //View view = View.inflate(getContext(), R.layout.fragment_my_favorite, null);
 
+        /*ma2=new MyAdapter(R.layout.view_list_itemlayout,getData());
+        rcv2=root.findViewById(R.id.favorite_content);
+        StaggeredGridLayoutManager sm2=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        rcv2.setLayoutManager(sm2);
+        rcv2.setAdapter(ma2);*/
 
     }
 

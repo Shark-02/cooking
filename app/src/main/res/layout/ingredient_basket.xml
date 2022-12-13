@@ -26,39 +26,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04" />
 
-    <LinearLayout
-        android:orientation = "horizontal"
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/orange_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/select_finish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:backgroundTint="@color/orange_2"
-        android:text="选好了"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.985" />
-
-    <ImageView
-        android:id="@+id/basket02"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="100dp"
-        android:src="@drawable/basket_2"
-        app:layout_constraintBottom_toBottomOf="@+id/select_finish"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/select_finish"
-        app:layout_constraintVertical_bias=".8" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/basket_rcy"
         android:layout_width="match_parent"

@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cooking.ui.Ingredient.Fragment_bean;
 import com.example.cooking.ui.Ingredient.Fragment_fruit;
@@ -37,7 +38,7 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
 
     ImageView sr_ic;
     NavigationView ingredient_nav;
-    List<String> ingre_id;
+    List<String> ingre_id,IngreId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,11 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
         ImageView basket=findViewById(R.id.basket01);
         sr_ic = findViewById(R.id.search_icon);
         ingre_id = new ArrayList<>();
+        Bundle bb=getIntent().getExtras();
+        if(bb!=null) {
+            IngreId = bb.getStringArrayList("Ingre_id");
+            ingre_id.addAll(IngreId);
+        }
         //new MyThread().start();
         ImageView jiang = findViewById(R.id.jiang_add);
         jiang.setOnClickListener(this);
@@ -87,6 +93,9 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(SelectIngredient.this,Ingredient_basket.class);
+                Bundle bundle = new Bundle();
+                bundle.putStringArrayList("Ingre_id",(ArrayList<String>)ingre_id);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -109,6 +118,7 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
             public void onClick(View view) {
                 Intent intent = new Intent(SelectIngredient.this, MatchIngredient.class);
                 startActivity(intent);
+                finish();
             }
         });
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -439,30 +449,39 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.jidan_add:
                 ingre_id.add("鸡蛋");
+                Toast.makeText(SelectIngredient.this, "您选择了鸡蛋", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.jiang_add:
                 ingre_id.add("姜");
+                Toast.makeText(SelectIngredient.this, "您选择了姜", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.suan_add:
                 ingre_id.add("蒜");
+                Toast.makeText(SelectIngredient.this, "您选择了蒜", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.dacong_add:
                 ingre_id.add("大葱");
+                Toast.makeText(SelectIngredient.this, "您选择了大葱", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.xiaocong_add:
                 ingre_id.add("小葱");
+                Toast.makeText(SelectIngredient.this, "您选择了小葱", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.jichi_add:
                 ingre_id.add("鸡翅");
+                Toast.makeText(SelectIngredient.this, "您选择了鸡翅", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.jitui_add:
                 ingre_id.add("鸡腿");
+                Toast.makeText(SelectIngredient.this, "您选择了鸡腿", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.jixiongrou_add:
-                ingre_id.add("鸡蛋");
+                ingre_id.add("鸡胸肉");
+                Toast.makeText(SelectIngredient.this, "您选择了鸡胸肉", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.dianfen_add:
                 ingre_id.add("淀粉");
+                Toast.makeText(SelectIngredient.this, "您选择了淀粉", Toast.LENGTH_SHORT).show();
                 break;
 //            case R.id.baijiu_add:
 //                ingre_id.add(305);

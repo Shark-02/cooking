@@ -38,7 +38,7 @@ public class MatchIngredient extends AppCompatActivity {
     ImageView iv;
     SearchView sv;
     Cursor cursor;
-    ArrayList beclick;
+    ArrayList<String> beclick;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +75,11 @@ public class MatchIngredient extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d("size",String.valueOf(beclick.size()));
+                Intent intent=new Intent(MatchIngredient.this,SelectIngredient.class);
+                Bundle bundle = new Bundle();
+                bundle.putStringArrayList("Ingre_id", beclick);
+                intent.putExtras(bundle);
+                startActivity(intent);
                 finish();
             }
 
