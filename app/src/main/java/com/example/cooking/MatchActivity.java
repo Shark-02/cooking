@@ -37,7 +37,7 @@ public class MatchActivity extends AppCompatActivity {
     List<Ingredient_match> data;
     MatchResAdapter mra;
     RecyclerView rcv;
-    ArrayList<Integer> IngreId;
+    ArrayList<String> IngreId;
     //String[] strings;
     Cursor cursor;
     ImageView back;
@@ -51,7 +51,7 @@ public class MatchActivity extends AppCompatActivity {
         data=new ArrayList<>();
         onclick=false;
         Bundle bb=getIntent().getExtras();
-        IngreId=bb.getIntegerArrayList("Ingre_id");
+        IngreId=bb.getStringArrayList("Ingre_id");
         //System.out.println(IngreId.size());
 //        Intent intent=getIntent();
 //        Match_menu =intent.getStringExtra("Match_menu");
@@ -143,12 +143,12 @@ public class MatchActivity extends AppCompatActivity {
         return bitmap;
     }
 
-    public List<Ingredient_match> getData(Integer mat){
+    public List<Ingredient_match> getData(String mat){
         List<Ingredient_match> data22= new ArrayList<>();
         MyDatabaseHelper mymatchHelper = new MyDatabaseHelper(MatchActivity.this,"Cooking.db",null,1);
         SQLiteDatabase db = mymatchHelper.getReadableDatabase();
         //得到cursor
-        cursor = db.rawQuery("select title,pic from Menu,Picture,IngredientInMenu where IngredientInMenu.ingredient_id=" + mat + " and IngredientInMenu.menu_id=menu.menu_id and Picture.id=cover" , null);
+        cursor = db.rawQuery("select title,pic from Menu,Picture,IngredientInMenu,Ingredient where Ingredient.name like '" + mat + "' and Ingredient.pic_id=IngredientInMenu.ingredient_id and IngredientInMenu.menu_id=menu.menu_id and Picture.id=cover" , null);
         if (cursor.moveToFirst()) {
             Ingredient_match rs = new Ingredient_match();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
@@ -208,7 +208,7 @@ public class MatchActivity extends AppCompatActivity {
             //得到cursor
             MyDatabaseHelper mymatchHelper = new MyDatabaseHelper(MatchActivity.this,"Cooking.db",null,1);
             SQLiteDatabase db = mymatchHelper.getReadableDatabase();
-            cursor = db.rawQuery("select menu_id from IngredientInMenu where ingredient_id=" + s.get(i) , null);
+            cursor = db.rawQuery("select menu_id from IngredientInMenu,Ingredient where Ingredient.name like '" + s.get(i) + "'and Ingredient.pic_id=IngredientInMenu.ingredient_id ", null);
             if (cursor.moveToFirst()){
                 int index = cursor.getColumnIndex("menu_id");
                 int menu=cursor.getInt(index);

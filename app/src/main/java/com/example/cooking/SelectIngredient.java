@@ -37,7 +37,7 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
 
     ImageView sr_ic;
     NavigationView ingredient_nav;
-    List<Integer> ingre_id;
+    List<String> ingre_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +98,7 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
                 //int[] ingreid=ingre_id.toArray(new int[ingre_id.size()]);
                 Intent intent = new Intent(SelectIngredient.this, MatchActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putIntegerArrayList("Ingre_id", (ArrayList<Integer>) ingre_id);
+                bundle.putStringArrayList("Ingre_id", (ArrayList<String>) ingre_id);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -438,44 +438,44 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.jidan_add:
-                ingre_id.add(337);
+                ingre_id.add("鸡蛋");
                 break;
             case R.id.jiang_add:
-                ingre_id.add(375);
+                ingre_id.add("姜");
                 break;
             case R.id.suan_add:
-                ingre_id.add(449);
+                ingre_id.add("蒜");
                 break;
             case R.id.dacong_add:
-                ingre_id.add(324);
+                ingre_id.add("大葱");
                 break;
             case R.id.xiaocong_add:
-                ingre_id.add(464);
+                ingre_id.add("小葱");
                 break;
             case R.id.jichi_add:
-                ingre_id.add(379);
+                ingre_id.add("鸡翅");
                 break;
             case R.id.jitui_add:
-                ingre_id.add(382);
+                ingre_id.add("鸡腿");
                 break;
             case R.id.jixiongrou_add:
-                ingre_id.add(384);
+                ingre_id.add("鸡蛋");
                 break;
             case R.id.dianfen_add:
-                ingre_id.add(330);
+                ingre_id.add("淀粉");
                 break;
-            case R.id.baijiu_add:
-                ingre_id.add(305);
-                break;
-            case R.id.bailuobo_add:
-                ingre_id.add(307);
-                break;
-            case R.id.baiputaojiu_add:
-                ingre_id.add(309);
-                break;
-            case R.id.baitang_add:
-                ingre_id.add(310);
-                break;
+//            case R.id.baijiu_add:
+//                ingre_id.add(305);
+//                break;
+//            case R.id.bailuobo_add:
+//                ingre_id.add(307);
+//                break;
+//            case R.id.baiputaojiu_add:
+//                ingre_id.add(309);
+//                break;
+//            case R.id.baitang_add:
+//                ingre_id.add(310);
+//                break;
 //            case R.id.cu_add:
 //                ingre_id.add(323);
 //                break;

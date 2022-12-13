@@ -3,60 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_home_search_res.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_main.xml" value="0.13360507246376813" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_match.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_match_ingredient.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_my_chat.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_search.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/activity_select_ingredient.xml" value="0.264" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/collect_view.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fans_message_view.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_hot.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_meatt.xml" value="0.4" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_rice.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/fragment_view.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/home_nav_right.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/match_ingredient_item.xml" value="0.2526041666666667" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/search_result_item.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/layout/view_list_itemlayout.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_1/app/src/main/res/menu/nav_home.xml" value="0.2526041666666667" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_gengduo_enter.xml" value="0.1" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_hongbei_enter.xml" value="0.1" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_jiachang_enter.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_main.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_main_bottom.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_match_ingredient.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_menu.xml" value="0.25" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_miantiao_enter.xml" value="0.1" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_my_finish.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_my_home.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_release.xml" value="0.25" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_select_ingredient.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_tanggeng_enter.xml" value="0.1" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_upload.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_xican_enter.xml" value="0.1" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_youzha_enter.xml" value="0.1" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/activity_zhengzhu_enter.xml" value="0.1" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_bean.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_home.xml" value="0.165" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_homepage.xml" value="0.165" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_my_favorite.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_my_published.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_rice.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_spice.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_upload.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/fragment_view.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/home_nav_right.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/ingredient_basket.xml" value="0.1984375" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/myhome_drawer.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/search_result_item.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/layout/view_list_itemlayout.xml" value="0.165" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/menu/ingredient_menu.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/menu/nav_home.xml" value="0.19947916666666668" />
-        <entry key="..\:/Users/86180/AndroidStudioProjects/cooking_2/app/src/main/res/menu/nav_menu_right.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/27373/AndroidStudioProjects/cooking_0/app/src/main/res/layout/activity_menu.xml" value="0.1322463768115942" />
       </map>
     </option>
   </component>
