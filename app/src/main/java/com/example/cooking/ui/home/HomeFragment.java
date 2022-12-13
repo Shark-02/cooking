@@ -26,13 +26,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.RecyclerView;
@@ -139,6 +142,21 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         NavController navController = Navigation.findNavController(getActivity(), R.id.myhome_fra);
         //AppBarConfiguration configuration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         //NavigationUI.setupActionBarWithNavController(this,navController,configuration);
+
+        /*navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController navController, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {
+                        if(navDestination.getId()==R.id.fragment_myFavorite){
+                            Toast.makeText(getContext(), "卧槽这么麻烦Ծ‸Ծ", Toast.LENGTH_SHORT).show();
+                            navController.navigate(R.id.myfavorite_frg);
+                            //SetupFavoriteAdapter();
+
+                        }
+                        else{
+                            navController.navigate(R.id.mypublished);
+                        }
+            }
+        });*/
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
         SetupAdapter();
@@ -281,6 +299,15 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
             data22.add(rs);
         }
         return data22;
+
+    }
+    void SetupFavoriteAdapter(){
+
+        ma2=new MyAdapter(R.layout.view_list_itemlayout,getData());
+        rcv=root.findViewById(R.id.favorite_content);
+        StaggeredGridLayoutManager sm2=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        rcv.setLayoutManager(sm2);
+        rcv.setAdapter(ma2);
 
     }
 }

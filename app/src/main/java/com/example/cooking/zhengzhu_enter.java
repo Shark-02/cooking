@@ -1,5 +1,6 @@
 package com.example.cooking;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -14,6 +15,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Data_view.DataGenerator;
 import com.example.cooking.Data_view.recipe;
@@ -73,6 +76,17 @@ public class zhengzhu_enter extends AppCompatActivity {
         StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         rcv.setLayoutManager(sm);
         rcv.setAdapter(ma);
+        ma.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(@NonNull BaseQuickAdapter adapter, @NonNull View view, int position) {
+                //itemView=sm.getChildAt(position);
+                //itemimg=itemView.findViewById(R.id.item_img);
+                //Bitmap bitmap = ((BitmapDrawable)itemimg.getDrawable()).getBitmap();
+                Intent intent = new Intent(zhengzhu_enter.this, Menu.class);
+                intent.putExtra("title",zhengzhu_data.get(position).title);
+                startActivity(intent);
+            }
+        });
 
     }
 
