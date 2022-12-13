@@ -244,19 +244,31 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         //cursor3.close();
 
         ma=new MyAdapter(R.layout.view_list_itemlayout,published_data);
-        rcv=root.findViewById(R.id.published_content);
-        StaggeredGridLayoutManager sm=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
-        rcv.setLayoutManager(sm);
-        rcv.setAdapter(ma);
+        if (root.findViewById(R.id.published_content) != null) {
+            rcv = root.findViewById(R.id.published_content);
+            StaggeredGridLayoutManager sm = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+            rcv.setLayoutManager(sm);
+            rcv.setAdapter(ma);
+        }
 
 
         //View view = View.inflate(getContext(), R.layout.fragment_my_favorite, null);
 
-        /*ma2=new MyAdapter(R.layout.view_list_itemlayout,getData());
-        rcv2=root.findViewById(R.id.favorite_content);
-        StaggeredGridLayoutManager sm2=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
-        rcv2.setLayoutManager(sm2);
-        rcv2.setAdapter(ma2);*/
+        ma2=new MyAdapter(R.layout.view_list_itemlayout,getData());
+        if(root.findViewById(R.id.favorite_content) != null) {
+            rcv2 = root.findViewById(R.id.favorite_content);
+            StaggeredGridLayoutManager sm2 = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+            rcv2.setLayoutManager(sm2);
+            rcv2.setAdapter(ma2);
+            ma2.setOnItemClickListener(new OnItemClickListener() {
+                @Override
+                public void onItemClick(@NonNull BaseQuickAdapter adapter, @NonNull View view, int position) {
+                    Intent intent = new Intent(getContext(), Menu.class);
+                    intent.putExtra("title",data.get(position).title);
+                    startActivity(intent);
+                }
+            });
+        }
 
     }
 

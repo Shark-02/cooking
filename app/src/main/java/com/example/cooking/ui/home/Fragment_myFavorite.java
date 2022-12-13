@@ -79,7 +79,7 @@ public class Fragment_myFavorite extends Fragment {
         // Inflate the layout for this fragment
         root=inflater.inflate(R.layout.fragment_my_favorite, container, false);
         SetupAdapter();
-        return inflater.inflate(R.layout.fragment_my_favorite, container, false);
+        return root;
     }
 
 
