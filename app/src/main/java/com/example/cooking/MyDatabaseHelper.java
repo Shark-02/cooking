@@ -27,22 +27,22 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             //primary key 将id列设为主键    autoincrement表示id列是自增长的
             "menu_id integer primary key autoincrement," +
             "cover integer," +
-            "title String," +
+            "title text," +
             "user_id integer," +
-            "introduction String)";
+            "introduction text)";
 
     public static final String CREATE_User = "create table User(" +
             "id integer primary key autoincrement," +
-            "user_name String," +
+            "user_name text," +
             "user_id integer," +
-            "password String," +
+            "password text," +
             "pic_id integer," +
             "fans_id integer," +
             "concern_id integer)";
     public static final String CREATE_Step = "create table Step(" +
             "id integer primary key autoincrement," +
             "pic_id integer," +
-            "steps String," +
+            "steps text," +
             "menu_id integer)";
     public static final String CREATE_Collection = "create table Collection(" +
             "id integer primary key autoincrement," +
@@ -53,7 +53,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             "id integer primary key autoincrement," +
             "ingredient_id integer," +
             "menu_id integer," +
-            "dosage string)";
+            "dosage text)";
 
     public static final String CREATE_Evaluation = "create table Evaluation(" +
             //primary key 将id列设为主键    autoincrement表示id列是自增长的
@@ -73,7 +73,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private Context mContext;
 
-   public MyDatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public MyDatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
         mContext = context;
     }
@@ -448,21 +448,21 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.insert("Picture",null,values);
         values.put("pic","fwxstep_4.jpg");
         db.insert("Picture",null,values);
-        values.put("pic","bcdftstep_1.jpg");
+        values.put("pic","bcdftstep_1.png");
         db.insert("Picture",null,values);
-        values.put("pic","bcdftstep_2.jpg");
+        values.put("pic","bcdftstep_2.png");
         db.insert("Picture",null,values);
-        values.put("pic","bcdftstep_3.jpg");
+        values.put("pic","bcdftstep_3.png");
         db.insert("Picture",null,values);
-        values.put("pic","bcdftstep_4.jpg");
+        values.put("pic","bcdftstep_4.png");
         db.insert("Picture",null,values);
-        values.put("pic","bcdftstep_5.jpg");
+        values.put("pic","bcdftstep_5.png");
         db.insert("Picture",null,values);
-        values.put("pic","bcdftstep_6.jpg");
+        values.put("pic","bcdftstep_6.png");
         db.insert("Picture",null,values);
-        values.put("pic","bcdftstep_7.jpg");
+        values.put("pic","bcdftstep_7.png");
         db.insert("Picture",null,values);
-        values.put("pic","bcdftstep_8.jpg");
+        values.put("pic","bcdftstep_8.png");
         db.insert("Picture",null,values);
         values.put("pic","jdtstep_1.png");
         db.insert("Picture",null,values);
@@ -474,75 +474,75 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.insert("Picture",null,values);
         values.put("pic","jdtstep_5.png");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_1.jpg");
+        values.put("pic","wztstep_1.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_2.jpg");
+        values.put("pic","wztstep_2.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_3.jpg");
+        values.put("pic","wztstep_3.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_4.jpg");
+        values.put("pic","wztstep_4.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_5.jpg");
+        values.put("pic","wztstep_5.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_6.jpg");
+        values.put("pic","wztstep_6.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_7.jpg");
+        values.put("pic","wztstep_7.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_8.jpg");
+        values.put("pic","wztstep_8.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_9.jpg");
+        values.put("pic","wztstep_9.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_10.jpg");
+        values.put("pic","wztstep_10.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_11.jpg");
+        values.put("pic","wztstep_11.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_12.jpg");
+        values.put("pic","wztstep_12.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_13.jpg");
+        values.put("pic","wztstep_13.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","wztstep_14.jpg");
+        values.put("pic","wztstep_14.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_1.jpg");
+        values.put("pic","mgtstep_1.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_2.jpg");
+        values.put("pic","mgtstep_2.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_3.jpg");
+        values.put("pic","mgtstep_3.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_4.jpg");
+        values.put("pic","mgtstep_4.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_5.jpg");
+        values.put("pic","mgtstep_5.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_6.jpg");
+        values.put("pic","mgtstep_6.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_7.jpg");
+        values.put("pic","mgtstep_7.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_8.jpg");
+        values.put("pic","mgtstep_8.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_9.jpg");
+        values.put("pic","mgtstep_9.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_10.jpg");
+        values.put("pic","mgtstep_10.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_11.jpg");
+        values.put("pic","mgtstep_11.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","mgtstep_12.jpg");
+        values.put("pic","mgtstep_12.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_1.jpg");
+        values.put("pic","tdtstep_1.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_2.jpg");
+        values.put("pic","tdtstep_2.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_3.jpg");
+        values.put("pic","tdtstep_3.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_4.jpg");
+        values.put("pic","tdtstep_4.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_5.jpg");
+        values.put("pic","tdtstep_5.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_6.jpg");
+        values.put("pic","tdtstep_6.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_7.jpg");
+        values.put("pic","tdtstep_7.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_8.jpg");
+        values.put("pic","tdtstep_8.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","tdtstep_9.jpg");
+        values.put("pic","tdtstep_9.PNG");
         db.insert("Picture",null,values);
         values.put("pic","cookiestep_1.jpg");
         db.insert("Picture",null,values);
@@ -560,73 +560,73 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.insert("Picture",null,values);
         values.put("pic","cookiestep_8.jpg");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_1.jpg");
+        values.put("pic","8cakestep_1.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_2.jpg");
+        values.put("pic","8cakestep_2.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_3.jpg");
+        values.put("pic","8cakestep_3.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_4.jpg");
+        values.put("pic","8cakestep_4.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_5.jpg");
+        values.put("pic","8cakestep_5.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_6.jpg");
+        values.put("pic","8cakestep_6.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_7.jpg");
+        values.put("pic","8cakestep_7.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_8.jpg");
+        values.put("pic","8cakestep_8.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","8cakestep_9.jpg");
+        values.put("pic","8cakestep_9.PNG");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_1.jpg");
+        values.put("pic","pizzastep_1.png");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_2.jpg");
+        values.put("pic","pizzastep_2.png");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_3.jpg");
+        values.put("pic","pizzastep_3.png");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_4.jpg");
+        values.put("pic","pizzastep_4.png");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_5.jpg");
+        values.put("pic","pizzastep_5.png");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_6.jpg");
+        values.put("pic","pizzastep_6.png");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_7.jpg");
+        values.put("pic","pizzastep_7.png");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_8.jpg");
+        values.put("pic","pizzastep_8.png");
         db.insert("Picture",null,values);
-        values.put("pic","pizzastep_9.jpg");
+        values.put("pic","pizzastep_9.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_1.jpg");
+        values.put("pic","toaststep_1.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_2.jpg");
+        values.put("pic","toaststep_2.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_3.jpg");
+        values.put("pic","toaststep_3.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_4.jpg");
+        values.put("pic","toaststep_4.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_5.jpg");
+        values.put("pic","toaststep_5.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_6.jpg");
+        values.put("pic","toaststep_6.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_7.jpg");
+        values.put("pic","toaststep_7.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_8.jpg");
+        values.put("pic","toaststep_8.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_9.jpg");
+        values.put("pic","toaststep_9.png");
         db.insert("Picture",null,values);
-        values.put("pic","toaststep_10.jpg");
+        values.put("pic","toaststep_10.png");
         db.insert("Picture",null,values);
-        values.put("pic","bskcakestep_1.jpg");
+        values.put("pic","bskcakestep_1.png");
         db.insert("Picture",null,values);
-        values.put("pic","bskcakestep_2.jpg");
+        values.put("pic","bskcakestep_2.png");
         db.insert("Picture",null,values);
-        values.put("pic","bskcakestep_3.jpg");
+        values.put("pic","bskcakestep_3.png");
         db.insert("Picture",null,values);
-        values.put("pic","bskcakestep_4.jpg");
+        values.put("pic","bskcakestep_4.png");
         db.insert("Picture",null,values);
-        values.put("pic","bskcakestep_5.jpg");
+        values.put("pic","bskcakestep_5.png");
         db.insert("Picture",null,values);
-        values.put("pic","bskcakestep_6.jpg");
+        values.put("pic","bskcakestep_6.png");
         db.insert("Picture",null,values);
         values.put("pic","jjtrstep_1.jpg");
         db.insert("Picture",null,values);
@@ -1478,7 +1478,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values.put("pic","xiangcai.jpg");
         db.insert("Picture",null,values);
         values1.put("pic_id",458);
-        values1.put("name","香草");
+        values1.put("name","香菜");
         db.insert("Ingredient",null,values1);
         values.put("pic","xiangcaojing.jpg");
         db.insert("Picture",null,values);
@@ -1633,7 +1633,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values.put("pic","zhiwuyou.jpg");
         db.insert("Picture",null,values);
         values1.put("pic_id",489);
-        values1.put("name","植物园");
+        values1.put("name","植物油");
         db.insert("Ingredient",null,values1);
         values.put("pic","zhudu.png");
         db.insert("Picture",null,values);
@@ -3429,7 +3429,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values0.put("dosage","3个");
         db.insert("IngredientInMenu",null,values0);
 
-        values0.put("ingredient_id",0);
+        values0.put("ingredient_id",337);
         values0.put("menu_id",5);
         values0.put("dosage","4个");
         db.insert("IngredientInMenu",null,values0);
@@ -3852,7 +3852,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values0.put("dosage","1勺");
         db.insert("IngredientInMenu",null,values0);
 
-        values0.put("ingredient_id",337);
+        values0.put("ingredient_id",379);
         values0.put("menu_id",16);
         values0.put("dosage","10个");
         db.insert("IngredientInMenu",null,values0);
@@ -4518,3 +4518,5 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
 }
+
+
