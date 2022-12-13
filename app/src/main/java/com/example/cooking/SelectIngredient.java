@@ -556,5 +556,6 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
 //        }
 //        currentFragment=fg;
 //        transaction.commit();
+        }
     }
 }

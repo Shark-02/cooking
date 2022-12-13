@@ -54,8 +54,8 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
     NavigationView navViewStart;
     ImageView iv,itemimg;
     List<recipe> data;
-    MyAdapter ma;
-    RecyclerView rcv;
+    MyAdapter ma,ma2;
+    RecyclerView rcv,rcv2;
     List<recipe> published_data;
     List<recipe> favorite_data;
     MyDatabaseHelper dbHelper;
@@ -140,6 +140,7 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         //AppBarConfiguration configuration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         //NavigationUI.setupActionBarWithNavController(this,navController,configuration);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
+
         SetupAdapter();
     }
 
@@ -225,6 +226,10 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         rcv.setLayoutManager(sm);
         rcv.setAdapter(ma);
 
+
+        //View view = View.inflate(getContext(), R.layout.fragment_my_favorite, null);
+
+
     }
 
     public Bitmap getImageBitmap(String imgName){
@@ -234,6 +239,48 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         opt.inPreferredConfig = Bitmap.Config.RGB_565;
         Bitmap bitmap = BitmapFactory.decodeFile(img, opt);
         return bitmap;
+
+    }
+
+    public List<recipe> getData(){
+        List<recipe> data22 = new ArrayList<>();
+        //Toast.makeText(MatchIngredient.this, "没有查询到数据", Toast.LENGTH_SHORT).show();
+        MyDatabaseHelper myopenHelper = new MyDatabaseHelper(getContext(),"Cooking.db",null,1);
+        SQLiteDatabase db = myopenHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select title,pic from Menu,Picture,Collection where  Picture.id=cover and Collection.menu_id=Menu.menu_id  order by Collection.id desc" , null);
+        if (cursor.moveToFirst()){
+            recipe rs = new recipe();
+            //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
+            rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+
+            int inx=cursor.getColumnIndex("title");
+            rs.title= cursor.getString(inx);
+
+            /*int inx2=cursor.getColumnIndex("introduction");
+            rs.content= cursor.getString(inx2);
+
+            //Log.d("amount",rs.ingre_title);*/
+            data22.add(rs);
+        }
+        while(cursor.moveToNext()) {
+            //moveToNext()移动光标到下一行
+            //count+=1;
+            recipe rs = new recipe();
+            //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
+            rs.img = getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+
+            int inx = cursor.getColumnIndex("title");
+            rs.title = cursor.getString(inx);
+
+            /*int inx2 = cursor.getColumnIndex("introduction");
+            rs.content = cursor.getString(inx2);
+
+            //Log.d("amount",rs.ingre_title);*/
+            data22.add(rs);
+        }
+        return data22;
 
     }
 }

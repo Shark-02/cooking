@@ -19,6 +19,7 @@
         />
 
 
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -28,5 +29,7 @@
         app:headerLayout="@layout/home_nav_right"
         app:menu="@menu/nav_menu_right"
         />
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
