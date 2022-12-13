@@ -69,16 +69,29 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
         jichi.setOnClickListener(this);
         ImageView jitui = findViewById(R.id.jitui_add);
         jitui.setOnClickListener(this);
-//        ImageView jixiongrou = findViewById(R.id.jixiongrou_add;
-//        jixiongrou.setOnClickListener(this);
+        ImageView xilanhua = findViewById(R.id.xilanhua_add);
+        xilanhua.setOnClickListener(this);
         ImageView dianfen = findViewById(R.id.dianfen_add);
         dianfen.setOnClickListener(this);
-//        ImageView baijiu = findViewById(R.id.baijiu_add);
-//        baijiu.setOnClickListener(this);
-//        ImageView bailuobo = findViewById(R.id.bailuobo_add);
-//        bailuobo.setOnClickListener(this);
-//          ImageView baitang = findViewById(R.id.baitang_add);
-//          baitang.setOnClickListener(this);
+        ImageView xiaofanqie = findViewById(R.id.xiaofanqie_add);
+        xiaofanqie.setOnClickListener(this);
+        ImageView suannai = findViewById(R.id.suannai_add);
+        suannai.setOnClickListener(this);
+        ImageView niunai = findViewById(R.id.niunai_add);
+        niunai.setOnClickListener(this);
+        ImageView peigen = findViewById(R.id.peigen_add);
+        peigen.setOnClickListener(this);
+        ImageView feiniu = findViewById(R.id.feiniu_add);
+        feiniu.setOnClickListener(this);
+        ImageView zhuzhou = findViewById(R.id.zhuzhou_add);
+        zhuzhou.setOnClickListener(this);
+        ImageView xiaomila = findViewById(R.id.xiaomila_add);
+        xiaomila.setOnClickListener(this);
+        ImageView meigancai = findViewById(R.id.meigancai_add);
+        meigancai.setOnClickListener(this);
+        ImageView caomei = findViewById(R.id.caomei_add);
+        caomei.setOnClickListener(this);
+
 
         //这里是Back
         select_ingredient_back.setOnClickListener(new View.OnClickListener() {
@@ -451,6 +464,14 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
                 ingre_id.add("鸡蛋");
                 Toast.makeText(SelectIngredient.this, "您选择了鸡蛋", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.xilanhua_add:
+                ingre_id.add("西兰花");
+                Toast.makeText(SelectIngredient.this, "您选择了西兰花", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.xiaofanqie_add:
+                ingre_id.add("小番茄");
+                Toast.makeText(SelectIngredient.this, "您选择了小番茄", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.jiang_add:
                 ingre_id.add("姜");
                 Toast.makeText(SelectIngredient.this, "您选择了姜", Toast.LENGTH_SHORT).show();
@@ -475,9 +496,37 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
                 ingre_id.add("鸡腿");
                 Toast.makeText(SelectIngredient.this, "您选择了鸡腿", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.jixiongrou_add:
-                ingre_id.add("鸡胸肉");
-                Toast.makeText(SelectIngredient.this, "您选择了鸡胸肉", Toast.LENGTH_SHORT).show();
+            case R.id.suannai_add:
+                ingre_id.add("酸奶");
+                Toast.makeText(SelectIngredient.this, "您选择了酸奶", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.niunai_add:
+                ingre_id.add("牛奶");
+                Toast.makeText(SelectIngredient.this, "您选择了牛奶", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.peigen_add:
+                ingre_id.add("培根");
+                Toast.makeText(SelectIngredient.this, "您选择了培根", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.feiniu_add:
+                ingre_id.add("肥牛");
+                Toast.makeText(SelectIngredient.this, "您选择了肥牛", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.zhuzhou_add:
+                ingre_id.add("猪肘");
+                Toast.makeText(SelectIngredient.this, "您选择了猪肘", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.meigancai_add:
+                ingre_id.add("梅干菜");
+                Toast.makeText(SelectIngredient.this, "您选择了梅干菜", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.xiaomila_add:
+                ingre_id.add("小米辣");
+                Toast.makeText(SelectIngredient.this, "您选择了小米辣", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.caomei_add:
+                ingre_id.add("草莓");
+                Toast.makeText(SelectIngredient.this, "您选择了草莓", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.dianfen_add:
                 ingre_id.add("淀粉");

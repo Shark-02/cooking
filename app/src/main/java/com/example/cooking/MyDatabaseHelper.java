@@ -1430,7 +1430,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values1.put("pic_id",448);
         values1.put("name","丝瓜");
         db.insert("Ingredient",null,values1);
-        values.put("pic","suan.jpg");
+        values.put("pic","suan.png");
         db.insert("Picture",null,values);
         values1.put("pic_id",449);
         values1.put("name","蒜");
