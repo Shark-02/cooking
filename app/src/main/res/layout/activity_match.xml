@@ -31,83 +31,65 @@
         />
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
         android:scrollbars="none"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_box">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <Button
-        android:id="@+id/button7"
-        android:layout_width="94dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="132dp"
+                android:id="@+id/matchbutton"
+                android:layout_width="94dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="132dp"
 
-        android:text="匹配度"
-        app:backgroundTint="@color/cardview_dark_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                android:text="匹配度"
+                app:backgroundTint="@color/cardview_dark_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="94dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="352dp"
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="94dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="352dp"
 
-        android:text="评分"
-        app:backgroundTint="@color/cardview_dark_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                android:text="评分"
+                app:backgroundTint="@color/cardview_dark_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="94dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="16dp"
+            <Button
+                android:id="@+id/comprebutton"
+                android:layout_width="94dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
 
-        android:text="综合排序"
-        app:backgroundTint="@color/cardview_dark_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                android:text="综合排序"
+                app:backgroundTint="@color/cardview_dark_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="94dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="244dp"
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="94dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="244dp"
 
-        android:text="完成度"
-        app:backgroundTint="@color/cardview_dark_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                android:text="完成度"
+                app:backgroundTint="@color/cardview_dark_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
-
-    <ImageView
-        android:id="@+id/hamburger"
-        android:layout_width="131dp"
-        android:layout_height="110dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="176dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hamburger" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="300dp"
-        android:text="秘制小汉堡"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/match_back"
@@ -120,6 +102,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_margin="15dp"
         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menu_match_res"
+        android:layout_width="406dp"
+        android:layout_height="577dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

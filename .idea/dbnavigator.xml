@@ -12,7 +12,7 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="3a103fd4-798c-4eb7-b970-f3d29bb77860">
+    <connection id="d42bc5d6-0c2e-4968-b730-c718527124a4">
       <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
@@ -21,31 +21,12 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="3a103fd4-798c-4eb7-b970-f3d29bb77860" object-ref="schemas/main/tables/Ingredient" />
+      <object connection-id="d42bc5d6-0c2e-4968-b730-c718527124a4" object-ref="schemas/main/tables/Ingredient" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="3a103fd4-798c-4eb7-b970-f3d29bb77860" dataset="main.Menu" active-filter-id="fd1a4ce8-47dd-4754-8b77-ffddd1563f71">
-      <filter id="fd1a4ce8-47dd-4754-8b77-ffddd1563f71" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="menu_id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
-    <filter-actions connection-id="3a103fd4-798c-4eb7-b970-f3d29bb77860" dataset="main.Ingredient" active-filter-id="ea79e0a5-d3c5-4354-b98e-49ce710f2939">
-      <filter id="ea79e0a5-d3c5-4354-b98e-49ce710f2939" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
-    <filter-actions connection-id="3a103fd4-798c-4eb7-b970-f3d29bb77860" dataset="main.Picture" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="3a103fd4-798c-4eb7-b970-f3d29bb77860" dataset="main.IngredientInMenu" active-filter-id="63595241-21f2-4251-bac5-dfb238a4cdc8">
-      <filter id="63595241-21f2-4251-bac5-dfb238a4cdc8" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
-    <filter-actions connection-id="3a103fd4-798c-4eb7-b970-f3d29bb77860" dataset="main.Collection" active-filter-id="a4dd1d93-0fd9-4908-8125-41226ffb4f07">
-      <filter id="a4dd1d93-0fd9-4908-8125-41226ffb4f07" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
+    <filter-actions connection-id="d42bc5d6-0c2e-4968-b730-c718527124a4" dataset="main.Ingredient" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="d42bc5d6-0c2e-4968-b730-c718527124a4" dataset="main.Picture" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -64,7 +45,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="3a103fd4-798c-4eb7-b970-f3d29bb77860" active="true" signed="true">
+      <connection id="d42bc5d6-0c2e-4968-b730-c718527124a4" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -79,7 +60,7 @@
           <port value="" />
           <database value="" />
           <files>
-            <file path="C:\Users\86180\AppData\Local\Google\AndroidStudio2021.2\device-explorer\Pixel_2_API_29 [emulator-5554]\data\data\com.example.cooking\databases\Cooking_new.db" schema="main" />
+            <file path="C:\Users\27373\AppData\Local\Google\AndroidStudio2021.2\device-explorer\emulator-5554\data\data\com.example.cooking\databases\Cooking.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

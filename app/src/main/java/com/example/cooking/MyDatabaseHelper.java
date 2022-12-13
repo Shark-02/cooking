@@ -1478,7 +1478,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values.put("pic","xiangcai.jpg");
         db.insert("Picture",null,values);
         values1.put("pic_id",458);
-        values1.put("name","香草");
+        values1.put("name","香菜");
         db.insert("Ingredient",null,values1);
         values.put("pic","xiangcaojing.jpg");
         db.insert("Picture",null,values);
@@ -1633,7 +1633,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values.put("pic","zhiwuyou.jpg");
         db.insert("Picture",null,values);
         values1.put("pic_id",489);
-        values1.put("name","植物园");
+        values1.put("name","植物油");
         db.insert("Ingredient",null,values1);
         values.put("pic","zhudu.png");
         db.insert("Picture",null,values);
@@ -3852,7 +3852,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         values0.put("dosage","1勺");
         db.insert("IngredientInMenu",null,values0);
 
-        values0.put("ingredient_id",337);
+        values0.put("ingredient_id",379);
         values0.put("menu_id",16);
         values0.put("dosage","10个");
         db.insert("IngredientInMenu",null,values0);
@@ -4518,3 +4518,5 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
 }
+
+
