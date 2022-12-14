@@ -22,7 +22,7 @@
         android:ems="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="350dp"
         android:textSize="20sp" />
 
     <TextView

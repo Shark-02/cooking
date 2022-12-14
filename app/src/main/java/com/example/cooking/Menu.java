@@ -210,7 +210,7 @@ public class Menu extends AppCompatActivity {
                 cursor3 = db.rawQuery("select menu_id from Menu where  Menu.title like '%" + title + "%'", null);
                 if (cursor3.moveToFirst())
                 {menuid=cursor3.getInt(cursor3.getColumnIndexOrThrow("menu_id"));}
-                Cursor cursor6 = db.rawQuery("select menu_id from Finish  where menu_id="+ menuid, null);
+                Cursor cursor6 = db.rawQuery("select menu_id from Collection  where menu_id="+ menuid, null);
                 if(!cursor6.moveToFirst()) {
                     ContentValues cv = new ContentValues();
                     cv.put("user_id", 0221);

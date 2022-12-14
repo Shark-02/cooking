@@ -90,6 +90,7 @@ public class Upload extends AppCompatActivity {
                 cursor.moveToFirst();
                 Integer count = cursor.getInt(0);
                 cursor.close();
+                Log.d("conut",String.valueOf(count));
                 values.put("cover",count);
                 values.put("title",menuTitle);
                 values.put("user_id",2);

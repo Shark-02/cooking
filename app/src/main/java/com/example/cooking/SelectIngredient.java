@@ -130,6 +130,9 @@ public class SelectIngredient extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SelectIngredient.this, MatchIngredient.class);
+                Bundle bundle = new Bundle();
+                bundle.putStringArrayList("Ingre_id", (ArrayList<String>) ingre_id);
+                intent.putExtras(bundle);
                 startActivity(intent);
                 finish();
             }

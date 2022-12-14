@@ -220,8 +220,6 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
                 Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
                 rs.title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
                 Log.d("title",cursor.getString(cursor.getColumnIndexOrThrow("title")));
-                rs.content = cursor.getString(cursor.getColumnIndexOrThrow("introduction"));
-                Log.d("introduction",cursor.getString(cursor.getColumnIndexOrThrow("introduction")));
                 published_data.add(rs);
             }while (cursor.moveToNext() & cursor.moveToNext());
         }
@@ -254,7 +252,7 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
 
         //View view = View.inflate(getContext(), R.layout.fragment_my_favorite, null);
 
-        ma2=new MyAdapter(R.layout.view_list_itemlayout,getData());
+        /*ma2=new MyAdapter(R.layout.view_list_itemlayout,getData());
         if(root.findViewById(R.id.favorite_content) != null) {
             rcv2 = root.findViewById(R.id.favorite_content);
             StaggeredGridLayoutManager sm2 = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
@@ -267,8 +265,8 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
                     intent.putExtra("title",data.get(position).title);
                     startActivity(intent);
                 }
-            });
-        }
+            });*/
+        //}
 
     }
 
@@ -287,7 +285,7 @@ public class HomeFragment extends Fragment /*implements View.OnClickListener*/ {
         //Toast.makeText(MatchIngredient.this, "没有查询到数据", Toast.LENGTH_SHORT).show();
         MyDatabaseHelper myopenHelper = new MyDatabaseHelper(getContext(),"Cooking.db",null,1);
         SQLiteDatabase db = myopenHelper.getReadableDatabase();
-        Cursor cursor = db.rawQuery("select title,pic from Menu,Picture,Collection where  Picture.id=cover and Collection.menu_id=Menu.menu_id  order by Collection.id desc" , null);
+        Cursor cursor = db.rawQuery("select title,pic from Menu,Picture,Collection where  Picture.id=cover and Collection.menu_id=Menu.menu_id and Collection.user_id=2 order by Collection.id desc" , null);
         if (cursor.moveToFirst()){
             recipe rs = new recipe();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));

@@ -39,10 +39,14 @@ public class MatchIngredient extends AppCompatActivity {
     SearchView sv;
     Cursor cursor;
     ArrayList<String> beclick;
+    ArrayList<String> IngreId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match_ingredient);
+        Bundle bb=getIntent().getExtras();
+        if(bb!=null){
+            IngreId=bb.getStringArrayList("Ingre_id");}
         Setup();
         Listen();
         showListview();
@@ -75,6 +79,7 @@ public class MatchIngredient extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d("size",String.valueOf(beclick.size()));
+                beclick.addAll(IngreId);
                 Intent intent=new Intent(MatchIngredient.this,SelectIngredient.class);
                 Bundle bundle = new Bundle();
                 bundle.putStringArrayList("Ingre_id", beclick);
