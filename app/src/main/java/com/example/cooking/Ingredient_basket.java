@@ -1,5 +1,6 @@
 package com.example.cooking;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +16,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.example.cooking.Adapter.MyAdapter;
 import com.example.cooking.Adapter.MySearchAdapter;
 import com.example.cooking.Data_view.DataGenerator;
@@ -58,6 +61,7 @@ public class Ingredient_basket extends AppCompatActivity {
                 Search_recipe rs = new Search_recipe();
                 rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
                 rs.ingre_title = ingreId.get(i);
+                rs.add_id=R.drawable.delete;
                 basket_data.add(rs);
             }
         }
@@ -67,6 +71,17 @@ public class Ingredient_basket extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(rcv.getContext());
         rcv.setLayoutManager(layoutManager);
         rcv.setAdapter(ma);
+        ma.addChildClickViewIds(R.id.add_ingre);
+        ma.setOnItemChildClickListener(new OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(@NonNull BaseQuickAdapter<?, ?> adapter, @NonNull View view, int position) {
+                if(view.getId()==R.id.add_ingre){
+                    ma.remove(position);
+                    //basket_data.remove(basket_data.get(position));
+                    ma.notifyDataSetChanged();
+                }
+            }
+        });
 
     }
 
