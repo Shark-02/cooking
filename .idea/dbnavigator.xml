@@ -12,7 +12,7 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="1bdab486-4e23-45b8-bc2f-723792bd9fa2">
+    <connection id="5c62acaa-b9b9-487f-8e99-55798f882511">
       <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
@@ -23,13 +23,9 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="1bdab486-4e23-45b8-bc2f-723792bd9fa2" dataset="main.Menu" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="1bdab486-4e23-45b8-bc2f-723792bd9fa2" dataset="main.Ingredient" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="1bdab486-4e23-45b8-bc2f-723792bd9fa2" dataset="main.Picture" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="1bdab486-4e23-45b8-bc2f-723792bd9fa2" dataset="main.IngredientInMenu" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="1bdab486-4e23-45b8-bc2f-723792bd9fa2" dataset="main.Step" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="1bdab486-4e23-45b8-bc2f-723792bd9fa2" dataset="main.Collection" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="1bdab486-4e23-45b8-bc2f-723792bd9fa2" dataset="main.Finish" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="5c62acaa-b9b9-487f-8e99-55798f882511" dataset="main.Menu" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="5c62acaa-b9b9-487f-8e99-55798f882511" dataset="main.Collection" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="5c62acaa-b9b9-487f-8e99-55798f882511" dataset="main.Finish" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -48,7 +44,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="1bdab486-4e23-45b8-bc2f-723792bd9fa2" active="true" signed="true">
+      <connection id="5c62acaa-b9b9-487f-8e99-55798f882511" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
