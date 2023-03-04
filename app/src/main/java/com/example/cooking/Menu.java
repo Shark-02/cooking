@@ -79,7 +79,13 @@ public class Menu extends AppCompatActivity {
         cursor1 = db.rawQuery("select pic from Menu,Picture where  Picture.id=cover and  Menu.title like '%" + title + "%'", null);
         if (cursor1.moveToFirst())
         {
-            bigimg.setImageBitmap(getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic"))));
+            if(getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")))==null){
+                bigimg.setImageBitmap(BitmapFactory.decodeResource(getResources(), R.drawable.lose, null));
+            }
+            else{
+                bigimg.setImageBitmap(getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic"))));
+            }
+
         }
 
     }
@@ -121,7 +127,12 @@ public class Menu extends AppCompatActivity {
             Log.d("indx1","1");
             Buzhou bz = new Buzhou();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-            bz.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+            if(getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")))==null){
+                bz.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+            }
+            else{
+                bz.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+            }
             //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
 
             int inx=cursor1.getColumnIndex("steps");
@@ -137,7 +148,12 @@ public class Menu extends AppCompatActivity {
             //count+=1;
             Buzhou bz = new Buzhou();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-            bz.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+            if(getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")))==null){
+                bz.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+            }
+            else{
+                bz.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+            }
             //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
 
 

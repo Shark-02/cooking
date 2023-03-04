@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -59,7 +61,13 @@ public class zhengzhu_enter extends AppCompatActivity {
         if(cursor.moveToFirst() & cursor1.moveToFirst()){
             do{
                 recipe rs = new recipe();
-                rs.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+                if(getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")))==null){
+                    rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+                }
+                else{
+                    rs.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+                }
+
                 Log.d("pic",cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
                 rs.title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
                 Log.d("title",cursor.getString(cursor.getColumnIndexOrThrow("title")));

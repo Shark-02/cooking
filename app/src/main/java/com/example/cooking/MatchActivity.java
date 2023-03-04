@@ -153,7 +153,13 @@ public class MatchActivity extends AppCompatActivity {
         if (cursor.moveToFirst()) {
             Ingredient_match rs = new Ingredient_match();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-            rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+            }
+            else{
+                rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            }
+
             //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
 
             int inx=cursor.getColumnIndex("title");
@@ -170,7 +176,12 @@ public class MatchActivity extends AppCompatActivity {
             //count+=1;
             Ingredient_match rs = new Ingredient_match();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-            rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+            }
+            else{
+                rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            }
             //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
             System.out.println(111);
 
@@ -265,7 +276,12 @@ public class MatchActivity extends AppCompatActivity {
         if (cursor.moveToFirst()) {
             Ingredient_match rs = new Ingredient_match();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-            rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+            }
+            else{
+                rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            }
             //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
 
             int inx=cursor.getColumnIndex("title");
@@ -282,7 +298,12 @@ public class MatchActivity extends AppCompatActivity {
             //count+=1;
             Ingredient_match rs = new Ingredient_match();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-            rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+            }
+            else{
+                rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            }
             //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
             System.out.println(111);
 

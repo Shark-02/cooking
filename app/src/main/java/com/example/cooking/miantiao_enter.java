@@ -60,6 +60,12 @@ public class miantiao_enter extends AppCompatActivity {
         if(cursor.moveToFirst() & cursor1.moveToFirst()){
             do{
                 recipe rs = new recipe();
+                if(getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")))==null){
+                    rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+                }
+                else{
+                    rs.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
+                }
                 rs.img=getImageBitmap(cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
                 Log.d("pic",cursor1.getString(cursor1.getColumnIndexOrThrow("pic")));
                 rs.title = cursor.getString(cursor.getColumnIndexOrThrow("title"));

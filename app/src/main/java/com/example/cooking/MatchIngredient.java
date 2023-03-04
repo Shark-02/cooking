@@ -118,7 +118,12 @@ public class MatchIngredient extends AppCompatActivity {
                 }else{
                     Search_recipe rs = new Search_recipe();
                     //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-                    rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+                    if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                        rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+                    }
+                    else{
+                        rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+                    }
                     Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
                     int inx=cursor.getColumnIndex("name");
                     rs.ingre_title= cursor.getString(inx);
@@ -130,7 +135,13 @@ public class MatchIngredient extends AppCompatActivity {
                     //moveToNext()移动光标到下一行
                     //count+=1;
                     Search_recipe rs = new Search_recipe();
-                    rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+                    if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                        rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+                    }
+                    else{
+                        rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+                    }
+
                     int inx=cursor.getColumnIndex("name");
                     rs.ingre_title= cursor.getString(inx);
                     rs.add_id = R.drawable.add;

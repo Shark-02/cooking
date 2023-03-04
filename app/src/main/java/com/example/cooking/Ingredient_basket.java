@@ -59,7 +59,12 @@ public class Ingredient_basket extends AppCompatActivity {
             Cursor cursor = db.rawQuery("select pic from Ingredient,Picture where Picture.id=pic_id and Ingredient.name like '" + ingreId.get(i) + "'", null);
             if(cursor.moveToFirst()){
                 Search_recipe rs = new Search_recipe();
-                rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+                if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                    rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+                }
+                else{
+                    rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+                }
                 rs.ingre_title = ingreId.get(i);
                 rs.add_id=R.drawable.delete;
                 basket_data.add(rs);

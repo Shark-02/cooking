@@ -34,6 +34,9 @@ public class Release extends AppCompatActivity {
         BitmapFactory.Options opt = new BitmapFactory.Options();
         opt.inPreferredConfig = Bitmap.Config.RGB_565;
         Bitmap bitmap = BitmapFactory.decodeFile(img, opt);
+        if(bitmap==null){
+            bitmap=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+        }
         cover.setImageBitmap(bitmap);
         release_back.setOnClickListener(new View.OnClickListener() {
             @Override

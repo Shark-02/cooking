@@ -101,6 +101,9 @@ public class Fragment_myPublished extends Fragment {
                 BitmapFactory.Options opt = new BitmapFactory.Options();
                 opt.inPreferredConfig = Bitmap.Config.RGB_565;
                 Bitmap bitmap = BitmapFactory.decodeFile(img, opt);
+                if(bitmap==null){
+                    bitmap=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+                }
                 rs.img=bitmap;
                 Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
                 rs.title = cursor.getString(cursor.getColumnIndexOrThrow("title"));

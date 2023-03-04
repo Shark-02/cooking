@@ -132,7 +132,12 @@ public class HomeSearchRes extends AppCompatActivity {
         else{
             recipe rs = new recipe();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-            rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+            }
+            else{
+                rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            }
             //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
 
             int inx=cursor.getColumnIndex("title");
@@ -149,7 +154,12 @@ public class HomeSearchRes extends AppCompatActivity {
             //count+=1;
             recipe rs = new recipe();
             //rs.img_id = cursor.getInt(cursor.getColumnIndexOrThrow("pic_id"));
-            rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            if(getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")))==null){
+                rs.img=  BitmapFactory.decodeResource(getResources(), R.drawable.lose, null);
+            }
+            else{
+                rs.img=getImageBitmap(cursor.getString(cursor.getColumnIndexOrThrow("pic")));
+            }
             //Log.d("pic",cursor.getString(cursor.getColumnIndexOrThrow("pic")));
 
             int inx=cursor.getColumnIndex("title");
